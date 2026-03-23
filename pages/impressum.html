@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum | MarkenDing</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo"><img src="../assets/images/logo.png" alt="MarkenDing Logo"></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">Über uns</a></li>
+      <li><a href="angebot.html">Angebot</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    <a href="kontakt.html" class="nav-cta">Lass uns reden</a>
+  </nav>
+  <section class="page-header">
+    <span class="section-label">Impressum</span>
+    <h1 class="section-title">Impressum</h1>
+    <p>Diese Seite wird bald mit Inhalt gefüllt.</p>
+  </section>
+  <section class="cta-section">
+    <h2 class="section-title reveal">Lass uns dein nächstes<br><em>Ding</em> starten.</h2>
+    <p class="reveal">Unverbindliches Erstgespräch — wir zeigen dir, wie Social Media dein Business nach vorne bringt.</p>
+    <a href="kontakt.html" class="btn-primary reveal">Jetzt Erstgespräch buchen
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo"><img src="../assets/images/logo.png" alt="MarkenDing Logo"></a>
+        <p>Dein Social Media Marketing Partner aus Zürich.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col"><h4>Unternehmen</h4><a href="about.html">Über uns</a><a href="blog.html">Blog</a><a href="kontakt.html">Kontakt</a></div>
+        <div class="footer-col"><h4>Rechtliches</h4><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 MarkenDing. Alle Rechte vorbehalten.</span><span>Made with ♥ in Zürich</span></div>
+  </footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
