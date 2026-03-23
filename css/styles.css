@@ -296,12 +296,11 @@ nav {
   margin-top: 0.5rem;
 }
 
-/* ─── MARQUEE ─── */
+/* ─── CLIENT LOGOS ─── */
 .marquee-section {
   padding: 3rem 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  overflow: hidden;
 }
 .marquee-label {
   text-align: center;
@@ -311,19 +310,64 @@ nav {
   color: var(--white-muted);
   margin-bottom: 2rem;
 }
-.marquee-track {
+.logos-track {
   display: flex;
-  gap: 5rem;
-  animation: marquee 25s linear infinite;
-  width: max-content;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 0 2rem;
 }
-.marquee-track img {
+.logos-track img {
   height: 36px;
   opacity: 0.4;
   filter: brightness(0) invert(1);
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
 }
-.marquee-track img:hover { opacity: 0.8; }
+.logos-track img.logo-color {
+  filter: none;
+}
+.logos-track img:hover {
+  opacity: 0.8;
+  transform: scale(1.15);
+}
+
+/* ─── LEGAL PAGES ─── */
+.legal-section {
+  padding: 4rem 2rem 6rem;
+}
+.legal-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.legal-inner h2 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  margin-bottom: 2.5rem;
+  color: var(--white);
+}
+.legal-inner h3 {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.legal-inner p {
+  color: var(--white-muted);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+.legal-inner a {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal-inner a:hover {
+  color: var(--gold);
+}
 
 /* ─── COST COMPARISON ─── */
 .comparison {
@@ -889,10 +933,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
 }
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+
 .reveal {
   opacity: 0;
   transform: translateY(40px);
