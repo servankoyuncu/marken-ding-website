@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | MarkenDing — Social Media Agentur Zürich</title>
+  <meta name="description" content="Kontaktiere MarkenDing für ein kostenloses Erstgespräch. Social Media Marketing Agentur aus Zürich.">
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo"><img src="../assets/images/logo.png" alt="MarkenDing Logo"></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">Über uns</a></li>
+      <li><a href="angebot.html">Angebot</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="kontakt.html" class="active">Kontakt</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    <a href="kontakt.html" class="nav-cta">Lass uns reden</a>
+  </nav>
+
+  <section class="page-header">
+    <span class="section-label">Kontakt</span>
+    <h1 class="section-title">Lass uns <em>reden.</em></h1>
+    <p>Erzähl uns von deinem Business — wir melden uns innert 24 Stunden bei dir.</p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-inner reveal">
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" placeholder="Dein Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" name="email" placeholder="deine@email.ch" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company">Unternehmen</label>
+            <input type="text" id="company" name="company" placeholder="Dein Unternehmen">
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" placeholder="+41 ...">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">Woran bist du interessiert?</label>
+          <select id="service" name="service">
+            <option value="">Bitte auswählen...</option>
+            <option value="social-media">Social Media Management</option>
+            <option value="content">Content Creation & Reels</option>
+            <option value="strategie">Strategie & Beratung</option>
+            <option value="branding">Grafik Design & Branding</option>
+            <option value="komplett">Komplettpaket</option>
+            <option value="sonstiges">Sonstiges</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Nachricht *</label>
+          <textarea id="message" name="message" placeholder="Erzähl uns kurz von deinem Projekt oder deinen Zielen..." required></textarea>
+        </div>
+        <button type="button" class="btn-primary" onclick="alert('Formulardaten werden nach Anbindung an einen E-Mail-Service (z.B. Formspree, Netlify Forms) versendet.')">
+          Nachricht senden
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo"><img src="../assets/images/logo.png" alt="MarkenDing Logo"></a>
+        <p>Dein Social Media Marketing Partner aus Zürich.</p>
+        <div class="footer-social" style="margin-top: 1.5rem;">
+          <a href="https://www.instagram.com/marken.ding/" target="_blank" rel="noopener">IG</a>
+          <a href="https://www.tiktok.com/@markending101" target="_blank" rel="noopener">TT</a>
+          <a href="https://www.linkedin.com/company/markendingens/" target="_blank" rel="noopener">IN</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col"><h4>Unternehmen</h4><a href="about.html">Über uns</a><a href="blog.html">Blog</a><a href="kontakt.html">Kontakt</a></div>
+        <div class="footer-col"><h4>Services</h4><a href="angebot.html">Content Creation</a><a href="angebot.html">Video Editing</a><a href="angebot.html">Community Management</a></div>
+        <div class="footer-col"><h4>Rechtliches</h4><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 MarkenDing. Alle Rechte vorbehalten.</span><span>Made with ♥ in Zürich</span></div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
