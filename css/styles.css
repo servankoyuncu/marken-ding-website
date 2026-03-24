@@ -947,7 +947,8 @@ footer {
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   nav { padding: 1rem 1.5rem; }
-  .nav-links { display: none; }
+  .nav-links { display: none !important; }
+  .nav-cta { display: none !important; }
   .nav-toggle { display: flex; }
   .hero { padding: 8rem 1.5rem 4rem; }
   .hero-stats { flex-direction: column; gap: 2rem; }
