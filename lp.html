@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehr Kunden durch Social Media | MarkenDing</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=9">
+  <style>
+    /* ─── LP OVERRIDES ─── */
+    .lp-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(10,10,10,0.95);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+    .lp-nav img { height: 38px; }
+    .lp-nav .nav-cta {
+      padding: 0.65rem 1.6rem;
+      background: var(--gold);
+      color: var(--black);
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      transition: background 0.2s;
+    }
+    .lp-nav .nav-cta:hover { background: var(--gold-light); }
+
+    /* ─── HERO ─── */
+    .lp-hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10rem 1.5rem 6rem;
+    }
+    .lp-hero .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 1.2rem;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+    .lp-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 1.1;
+      max-width: 900px;
+      margin-bottom: 1.5rem;
+    }
+    .lp-hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .lp-hero .sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--white-dim);
+      max-width: 580px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+    .lp-hero .cta-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+    .lp-stats {
+      display: flex;
+      gap: 4rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+      width: 100%;
+      max-width: 700px;
+    }
+    .lp-stat h3 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--gold);
+    }
+    .lp-stat p {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white-muted);
+      margin-top: 0.2rem;
+    }
+
+    /* ─── PROBLEM ─── */
+    .lp-problem {
+      padding: 7rem 1.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .lp-problem .section-label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .lp-problem h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 3rem;
+    }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      text-align: left;
+    }
+    .problem-card {
+      background: var(--black-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.8rem;
+    }
+    .problem-card .icon {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .problem-card h4 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .problem-card p {
+      font-size: 0.9rem;
+      color: var(--white-dim);
+      line-height: 1.6;
+    }
+
+    /* ─── SOLUTION ─── */
+    .lp-solution {
+      padding: 7rem 1.5rem;
+      background: rgba(176,141,62,0.04);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .lp-solution-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .lp-solution h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .lp-solution h2 em { font-style: italic; color: var(--gold); }
+    .lp-solution > .lp-solution-inner > p {
+      color: var(--white-dim);
+      max-width: 560px;
+      margin: 0 auto 3.5rem;
+      line-height: 1.7;
+    }
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      text-align: left;
+    }
+    .solution-card {
+      background: var(--black-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .solution-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+    .solution-card .num {
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .solution-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .solution-card p {
+      font-size: 0.9rem;
+      color: var(--white-dim);
+      line-height: 1.65;
+    }
+
+    /* ─── LOGOS ─── */
+    .lp-logos {
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+    .lp-logos p {
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ─── HOW IT WORKS ─── */
+    .lp-how {
+      padding: 7rem 1.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .lp-how h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 3.5rem;
+    }
+    .lp-how h2 em { font-style: italic; color: var(--gold); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      position: relative;
+    }
+    .step {
+      text-align: center;
+    }
+    .step .step-num {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--gold);
+      margin: 0 auto 1.2rem;
+    }
+    .step h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .step p {
+      font-size: 0.9rem;
+      color: var(--white-dim);
+      line-height: 1.6;
+    }
+
+    /* ─── RESULTS ─── */
+    .lp-results {
+      padding: 7rem 1.5rem;
+      background: var(--black-card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .lp-results-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .lp-results h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 3rem;
+    }
+    .lp-results h2 em { font-style: italic; color: var(--gold); }
+    .results-numbers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+    }
+    .result-num {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--black);
+    }
+    .result-num h3 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .result-num p {
+      font-size: 0.85rem;
+      color: var(--white-dim);
+      line-height: 1.5;
+    }
+
+    /* ─── CTA FORM ─── */
+    .lp-cta {
+      padding: 7rem 1.5rem;
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .lp-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .lp-cta h2 em { font-style: italic; color: var(--gold); }
+    .lp-cta > p {
+      color: var(--white-dim);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+    .lp-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+    }
+    .lp-form input,
+    .lp-form select,
+    .lp-form textarea {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      background: var(--black-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .lp-form input:focus,
+    .lp-form select:focus,
+    .lp-form textarea:focus {
+      border-color: var(--gold);
+    }
+    .lp-form select option { background: var(--black-card); }
+    .lp-form textarea { resize: vertical; min-height: 120px; }
+    .lp-form .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .lp-form button {
+      width: 100%;
+      padding: 1.1rem;
+      background: var(--gold);
+      color: var(--black);
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .lp-form button:hover { background: var(--gold-light); }
+    .lp-form .guarantee {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--white-muted);
+      margin-top: 0.5rem;
+    }
+
+    /* ─── LP FOOTER ─── */
+    .lp-footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .lp-footer p {
+      font-size: 0.8rem;
+      color: var(--white-muted);
+    }
+    .lp-footer a { color: var(--white-muted); text-decoration: underline; }
+    .lp-footer a:hover { color: var(--white); }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 768px) {
+      .lp-nav { padding: 1rem 1.5rem; }
+      .lp-hero { padding: 8rem 1.5rem 5rem; }
+      .lp-stats { gap: 2rem; }
+      .lp-form .form-row-2 { grid-template-columns: 1fr; }
+      body { padding-top: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── HEADER ─── -->
+  <header class="lp-nav">
+    <a href="index.html"><img src="assets/images/logo.png" alt="MarkenDing"></a>
+    <a href="#gespräch" class="nav-cta">Kostenloses Gespräch →</a>
+  </header>
+
+  <!-- ─── HERO ─── -->
+  <section class="lp-hero">
+    <div class="badge">⚡ Social Media Agentur aus Zürich</div>
+    <h1>Mehr Kunden.<br>Mehr Umsatz.<br>Durch <em>Social Media.</em></h1>
+    <p class="sub">Wir verwandeln deinen Instagram- und TikTok-Auftritt in einen Verkaufskanal — mit Content, der echte Kunden bringt, nicht nur Follower.</p>
+    <div class="cta-group">
+      <a href="#gespräch" class="btn-primary">
+        Kostenloses Erstgespräch buchen
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="lp-stats">
+      <div class="lp-stat">
+        <h3>120M+</h3>
+        <p>Views erzielt</p>
+      </div>
+      <div class="lp-stat">
+        <h3>20'000+</h3>
+        <p>Leads generiert</p>
+      </div>
+      <div class="lp-stat">
+        <h3>500M+</h3>
+        <p>Impressionen</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROBLEM ─── -->
+  <section style="border-top: 1px solid var(--border);">
+    <div class="lp-problem">
+      <span class="section-label">Das Problem</span>
+      <h2>Du postest — aber es bringt<br>keine <em style="font-style:italic;color:var(--gold)">Kunden.</em></h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="icon">⏱</div>
+          <h4>Keine Zeit</h4>
+          <p>Du führst dein Business — wer soll dann noch täglich Content erstellen, posten und auf Kommentare antworten?</p>
+        </div>
+        <div class="problem-card">
+          <div class="icon">📉</div>
+          <h4>Kein Ergebnis</h4>
+          <p>Likes und Views kommen und gehen, aber echte Anfragen und Umsatz bleiben aus. Social Media fühlt sich wie Zeitverschwendung an.</p>
+        </div>
+        <div class="problem-card">
+          <div class="icon">🎯</div>
+          <h4>Kein Plan</h4>
+          <p>Du weisst nicht, was du posten sollst, welches Format funktioniert oder wie du mit Social Media wirklich Kunden gewinnst.</p>
+        </div>
+        <div class="problem-card">
+          <div class="icon">💸</div>
+          <h4>Kein System</h4>
+          <p>Ohne Strategie ist jeder Post ein Glücksspiel. Du investierst Energie ohne zu wissen, was wirklich funktioniert.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SOLUTION ─── -->
+  <section class="lp-solution">
+    <div class="lp-solution-inner">
+      <span class="section-label">Die Lösung</span>
+      <h2>Wir übernehmen alles —<br>du kassierst die <em>Kunden.</em></h2>
+      <p>Vom ersten Konzept bis zum fertigen Post. Wir bauen dir ein Social-Media-System, das 24/7 für dich arbeitet.</p>
+      <div class="solution-grid">
+        <div class="solution-card">
+          <div class="num">01 — Strategie</div>
+          <h4>Content der konvertiert</h4>
+          <p>Wir analysieren deine Zielgruppe und entwickeln eine Strategie, die genau auf dein Business und deine Kunden ausgerichtet ist.</p>
+        </div>
+        <div class="solution-card">
+          <div class="num">02 — Content</div>
+          <h4>Reels & Posts die performen</h4>
+          <p>Wir produzieren, schneiden und optimieren deinen Content für maximale Reichweite und Engagement auf Instagram & TikTok.</p>
+        </div>
+        <div class="solution-card">
+          <div class="num">03 — Community</div>
+          <h4>Deine Community, professionell geführt</h4>
+          <p>Wir antworten auf Kommentare und DMs in deinem Namen — schnell, authentisch und in deinem Ton.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── LOGOS ─── -->
+  <section class="lp-logos" style="border-top: 1px solid var(--border);">
+    <p>Vertraut von Unternehmen in der ganzen Schweiz</p>
+    <div class="logos-track">
+      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/68162a816b64741741501788_Menace%20Burger%20PNG%20T%20(1).png" alt="Menace Burger" loading="lazy">
+      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67ff9c3326277e44a9dda627_Musti%20Grill%20PNG.png" alt="MustiGrill" loading="lazy">
+      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67ff9c334517f0f15215171c_STS%20LOGO%20PNG.png" alt="STS" loading="lazy">
+      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67ff9c32596fb2c9d289aadf_Sparta%20Logo%20PNG.png" alt="Sparta" loading="lazy">
+      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67f54c74fc56ce75a2baa63a_HolzofenBeck%20PNG%20Web.png" alt="Holzofen Beck" loading="lazy">
+      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67f54c749c4b409f4ddde0b5_TTS%20PNG%20WEB.png" alt="TTS" loading="lazy">
+      <img src="assets/images/cano-logo.png" alt="Cano" loading="lazy">
+      <img src="assets/images/Tschaglis.png" alt="Tschaglis" loading="lazy" class="logo-color">
+    </div>
+  </section>
+
+  <!-- ─── RESULTS ─── -->
+  <section class="lp-results">
+    <div class="lp-results-inner">
+      <span class="section-label">Unsere Ergebnisse</span>
+      <h2>Zahlen, die für uns <em>sprechen.</em></h2>
+      <div class="results-numbers">
+        <div class="result-num">
+          <h3>120M+</h3>
+          <p>organische Views für unsere Kunden</p>
+        </div>
+        <div class="result-num">
+          <h3>500M+</h3>
+          <p>Impressionen auf Social Media</p>
+        </div>
+        <div class="result-num">
+          <h3>20'000+</h3>
+          <p>Leads und Kundenanfragen generiert</p>
+        </div>
+        <div class="result-num">
+          <h3>8+</h3>
+          <p>Schweizer Unternehmen betreut</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ─── -->
+  <section style="border-top: 1px solid var(--border);">
+    <div class="lp-how">
+      <span class="section-label">So funktioniert's</span>
+      <h2>In 3 Schritten zu mehr<br><em>Kunden.</em></h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>Kostenloses Erstgespräch</h4>
+          <p>Wir lernen dein Business, deine Ziele und deine Zielgruppe kennen. 30 Minuten, unverbindlich.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>Massgeschneiderte Strategie</h4>
+          <p>Wir entwickeln eine Strategie speziell für dein Business und zeigen dir, wie wir Kunden generieren.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>Wir legen los</h4>
+          <p>Du lehnst dich zurück. Wir übernehmen Content, Reels und Community — du bekommst die Kunden.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA FORM ─── -->
+  <section style="background: var(--black-card); border-top: 1px solid var(--border);" id="gespräch">
+    <div class="lp-cta">
+      <span class="section-label">Kostenloses Erstgespräch</span>
+      <h2>Bereit für <em>mehr Kunden</em><br>durch Social Media?</h2>
+      <p>Trag dich jetzt ein — wir melden uns innert 24 Stunden und zeigen dir, was für dein Business möglich ist. Kostenlos und unverbindlich.</p>
+      <form class="lp-form" method="POST" action="https://formspree.io/f/mgongjqz">
+        <input type="hidden" name="_subject" value="Neue Anfrage über Landingpage">
+        <input type="hidden" name="_next" value="https://www.marken-ding.com/pages/danke.html">
+        <div class="form-row-2">
+          <input type="text" name="name" placeholder="Dein Name *" required>
+          <input type="text" name="unternehmen" placeholder="Dein Unternehmen">
+        </div>
+        <div class="form-row-2">
+          <input type="email" name="email" placeholder="E-Mail Adresse *" required>
+          <input type="tel" name="telefon" placeholder="Telefon (optional)">
+        </div>
+        <select name="ziel">
+          <option value="">Was ist dein Ziel?</option>
+          <option value="mehr-kunden">Mehr Kunden gewinnen</option>
+          <option value="mehr-reichweite">Mehr Reichweite aufbauen</option>
+          <option value="content-erstellen">Professionellen Content erstellen</option>
+          <option value="reels">Reels & Video Content</option>
+          <option value="komplett">Komplettübernahme Social Media</option>
+        </select>
+        <button type="submit">
+          Jetzt kostenloses Gespräch buchen
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p class="guarantee">✓ Kostenlos &nbsp;·&nbsp; ✓ Unverbindlich &nbsp;·&nbsp; ✓ Innert 24h Rückmeldung</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="lp-footer">
+    <p>© 2026 MarkenDing – Social Media Koyuncu, Einzelfirma &nbsp;·&nbsp; <a href="pages/impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="pages/datenschutz.html">Datenschutz</a></p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
