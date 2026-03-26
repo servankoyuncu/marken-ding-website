@@ -315,6 +315,8 @@
     }
     @media (max-width: 700px) {
       .results-numbers { grid-template-columns: repeat(2, 1fr); }
+      .result-num h3 { font-size: 1.6rem; }
+      .testimonials-grid { grid-template-columns: 1fr !important; }
     }
     .result-num {
       padding: 2rem;
@@ -572,7 +574,7 @@
   <section style="padding: 7rem 1.5rem; border-top: 1px solid var(--border);">
     <div style="max-width: 760px; margin: 0 auto; text-align: center;">
       <span class="section-label">Was unsere Kunden sagen</span>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; text-align: left;">
+      <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; text-align: left;">
 
         <!-- Testimonial 1 -->
         <div style="background: var(--black-card); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
