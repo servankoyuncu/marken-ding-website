@@ -310,9 +310,11 @@
     .lp-results h2 em { font-style: italic; color: var(--gold); }
     .results-numbers {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 0.8rem;
-      overflow: hidden;
+    }
+    @media (min-width: 800px) {
+      .results-numbers { grid-template-columns: repeat(4, 1fr); }
     }
     @media (max-width: 700px) {
       .lp-results { padding: 5rem 1.2rem; }
