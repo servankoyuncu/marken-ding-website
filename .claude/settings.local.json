@@ -10,7 +10,9 @@
       "Bash(sed -i \"s/const links = document\\\\.querySelector\\(''\\\\.nav-links''\\);//g\" \"$f\")",
       "Bash(sed -i \"s/const toggle = document\\\\.querySelector\\(''\\\\.nav-toggle''\\);/const toggle = document.querySelector\\(''.nav-toggle''\\);\\\\n    const nav = document.querySelector\\(''nav''\\);/g\" \"$f\")",
       "Bash(sed -i 's|href=\"\"pages/angebot.html\"\">Content Creation|href=\"\"pages/angebot.html#content-creation\"\">Content Creation|g; s|href=\"\"pages/angebot.html\"\">Video Editing|href=\"\"pages/angebot.html#video-editing\"\">Video Editing|g; s|href=\"\"pages/angebot.html\"\">Community Management|href=\"\"pages/angebot.html#community-management\"\">Community Management|g' \"c:/Users/Servan Koyuncu/Documents/MarkenDing/Website/marken-ding/index.html\")",
-      "Bash(__NEW_LINE_f88fd091a0b2cc71__ sed:*)"
+      "Bash(__NEW_LINE_f88fd091a0b2cc71__ sed:*)",
+      "Bash(sed -i 's/Unverbindliches Erstgespräch — wir zeigen dir, wie Social Media dein Business nach vorne bringt\\\\./Unverbindliches Erstgespräch. Wir zeigen dir, wie Social Media dein Business nach vorne bringt./g' \"c:/Users/Servan Koyuncu/Documents/MarkenDing/Website/marken-ding/pages/about.html\" \"c:/Users/Servan Koyuncu/Documents/MarkenDing/Website/marken-ding/pages/blog.html\")",
+      "Bash(sed -i 's/Danke — wir melden/Danke, wir melden/g' \"c:/Users/Servan Koyuncu/Documents/MarkenDing/Website/marken-ding/pages/danke.html\")"
     ]
   }
 }
