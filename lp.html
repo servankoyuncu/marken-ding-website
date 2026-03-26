@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=9">
+  <link rel="stylesheet" href="css/styles.css?v=10">
   <style>
     /* ─── LP OVERRIDES ─── */
     .lp-nav {
@@ -314,8 +314,12 @@
       gap: 1.5rem;
     }
     @media (max-width: 700px) {
-      .results-numbers { grid-template-columns: repeat(2, 1fr); }
-      .result-num h3 { font-size: 1.6rem; }
+      .results-numbers { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .result-num { padding: 1.2rem; }
+      .result-num h3 { font-size: 1.4rem; }
+      .result-num p { font-size: 0.75rem; }
+      .lp-results { padding: 5rem 1.2rem; overflow: hidden; }
+      .lp-results-inner { max-width: 100%; }
       .testimonials-grid { grid-template-columns: 1fr !important; }
     }
     .result-num {
