@@ -310,16 +310,17 @@
     .lp-results h2 em { font-style: italic; color: var(--gold); }
     .results-numbers {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+    @media (min-width: 960px) {
+      .results-numbers { grid-template-columns: repeat(4, 1fr); }
     }
     @media (max-width: 700px) {
-      .results-numbers { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .lp-results { padding: 5rem 1.2rem; }
       .result-num { padding: 1.2rem; }
       .result-num h3 { font-size: 1.4rem; }
       .result-num p { font-size: 0.75rem; }
-      .lp-results { padding: 5rem 1.2rem; overflow: hidden; }
-      .lp-results-inner { max-width: 100%; }
       .testimonials-grid { grid-template-columns: 1fr !important; }
     }
     .result-num {
