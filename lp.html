@@ -310,8 +310,11 @@
     .lp-results h2 em { font-style: italic; color: var(--gold); }
     .results-numbers {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 700px) {
+      .results-numbers { grid-template-columns: repeat(2, 1fr); }
     }
     .result-num {
       padding: 2rem;
@@ -321,7 +324,7 @@
     }
     .result-num h3 {
       font-family: var(--font-heading);
-      font-size: 2.5rem;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
       font-weight: 800;
       color: var(--gold);
       margin-bottom: 0.4rem;
@@ -561,6 +564,67 @@
           <h3>8+</h3>
           <p>Schweizer Unternehmen betreut</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIAL ─── -->
+  <section style="padding: 7rem 1.5rem; border-top: 1px solid var(--border);">
+    <div style="max-width: 760px; margin: 0 auto; text-align: center;">
+      <span class="section-label">Was unsere Kunden sagen</span>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; text-align: left;">
+
+        <!-- Testimonial 1 -->
+        <div style="background: var(--black-card); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 3rem; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 1rem; font-family: Georgia, serif;">"</div>
+            <p style="font-family: var(--font-display); font-size: 1.1rem; line-height: 1.7; color: var(--white); margin-bottom: 2rem;">
+              Ihr seid eine echte Bereicherung für uns und das perfekte Puzzlestück in unserem Team! Besonders den 110%igen Einsatz, die Leidenschaft und den ständigen Drang nach Verbesserung schätze ich sehr. Auf viele weitere Jahre voller geiler Events und krankem Content!
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+            <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/68162a816b64741741501788_Menace%20Burger%20PNG%20T%20(1).png" alt="Menace Burger" style="height: 38px; width: auto; filter: brightness(0) invert(1); opacity: 0.8;">
+            <div>
+              <p style="font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem;">Menace Burger</p>
+              <p style="font-size: 0.8rem; color: var(--white-muted);">Kunde bei MarkenDing</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div style="background: var(--black-card); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 3rem; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 1rem; font-family: Georgia, serif;">"</div>
+            <p style="font-family: var(--font-display); font-size: 1.1rem; line-height: 1.7; color: var(--white); margin-bottom: 2rem;">
+              Kreativ, trendig und immer am Puls der Zeit. Unser Event lag ganz in der Hand von MarkenDing — und das Vertrauen wurde uns mit ausgezeichneter Arbeit zurückgezahlt.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+            <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--gold-dim); border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 700; color: var(--gold); font-size: 0.9rem;">BB</div>
+            <div>
+              <p style="font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem;">Benjamin Brander</p>
+              <p style="font-size: 0.8rem; color: var(--white-muted);">Time to Shine</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div style="background: var(--black-card); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 3rem; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 1rem; font-family: Georgia, serif;">"</div>
+            <p style="font-family: var(--font-display); font-size: 1.1rem; line-height: 1.7; color: var(--white); margin-bottom: 2rem;">
+              Die Partnerschaft mit MarkenDing hat unsere Social-Media-Präsenz erheblich gesteigert. Viele Kunden kommen wegen unserer Videos in die Bäckerei.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+            <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67f54c74fc56ce75a2baa63a_HolzofenBeck%20PNG%20Web.png" alt="De HolzofeBeck" style="height: 38px; width: auto; filter: brightness(0) invert(1); opacity: 0.8;">
+            <div>
+              <p style="font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem;">Marcel Gerber</p>
+              <p style="font-size: 0.8rem; color: var(--white-muted);">De HolzofeBeck</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
