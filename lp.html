@@ -685,9 +685,8 @@
       <span class="section-label">Kostenloses Erstgespräch</span>
       <h2>Bereit für <em>mehr Kunden</em><br>durch Social Media?</h2>
       <p>Trag dich jetzt ein. Wir melden uns innert 24 Stunden und zeigen dir, was für dein Business möglich ist. Kostenlos und unverbindlich.</p>
-      <form class="lp-form" method="POST" action="https://formspree.io/f/mgongjqz">
-        <input type="hidden" name="_subject" value="Neue Anfrage über Landingpage">
-        <input type="hidden" name="_next" value="https://www.marken-ding.com/pages/danke.html">
+      <form class="lp-form" method="POST" action="/.netlify/functions/contact">
+        <input type="hidden" name="_source" value="Landingpage">
         <div class="form-row-2">
           <input type="text" name="name" placeholder="Dein Name *" required>
           <input type="text" name="unternehmen" placeholder="Dein Unternehmen *" required>
