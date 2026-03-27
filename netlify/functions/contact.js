@@ -18,8 +18,8 @@ exports.handler = async (event) => {
 
   const transporter = nodemailer.createTransport({
     host: "smtp.ionos.de",
-    port: 587,
-    secure: false,
+    port: 465,
+    secure: true,
     auth: {
       user: "shero@marken-ding.com",
       pass: process.env.SMTP_PASS,
@@ -76,6 +76,6 @@ exports.handler = async (event) => {
     };
   } catch (err) {
     console.error(err);
-    return { statusCode: 500, body: "Fehler beim Senden." };
+    return { statusCode: 500, body: `Fehler: ${err.message}` };
   }
 };
