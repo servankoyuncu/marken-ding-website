@@ -580,7 +580,7 @@
   <section style="padding: 7rem 1.5rem; border-top: 1px solid var(--border);">
     <div style="max-width: 760px; margin: 0 auto; text-align: center;">
       <span class="section-label">Was unsere Kunden sagen</span>
-      <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; text-align: left;">
+      <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem; text-align: left;">
 
         <!-- Testimonial 1 -->
         <div style="background: var(--black-card); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
@@ -633,6 +633,23 @@
           </div>
         </div>
 
+        <!-- Testimonial 4 -->
+        <div style="background: var(--black-card); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 3rem; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 1rem; font-family: Georgia, serif;">"</div>
+            <p style="font-family: var(--font-display); font-size: 1.1rem; line-height: 1.7; color: var(--white); margin-bottom: 2rem;">
+              Wenn du Unterstützung in deinem Marketing für deinen Store oder Laden brauchst, bist du bei MarkenDing bestens aufgehoben. Alles Herzensmenschen mit voller Power dahinter und ohne leere Versprechungen. Der Weg wird gemeinsam gegangen, die Visionen gemeinsam besprochen, die Ideen gemeinsam entwickelt und das Ziel wird verfolgt und erreicht. Das ist Marketing.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+            <img src="assets/images/cano-logo.png" alt="Cano" style="height: 38px; width: auto; filter: brightness(0) invert(1); opacity: 0.8;">
+            <div>
+              <p style="font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem;">Cano</p>
+              <p style="font-size: 0.8rem; color: var(--white-muted);">Kunde bei MarkenDing</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -673,14 +690,28 @@
         <input type="hidden" name="_next" value="https://www.marken-ding.com/pages/danke.html">
         <div class="form-row-2">
           <input type="text" name="name" placeholder="Dein Name *" required>
-          <input type="text" name="unternehmen" placeholder="Dein Unternehmen">
+          <input type="text" name="unternehmen" placeholder="Dein Unternehmen *" required>
         </div>
         <div class="form-row-2">
           <input type="email" name="email" placeholder="E-Mail Adresse *" required>
           <input type="tel" name="telefon" placeholder="Telefon *" required>
         </div>
-        <select name="ziel">
-          <option value="">Was ist dein Ziel?</option>
+        <select name="umsatz" required>
+          <option value="">Wie hoch ist dein monatlicher Umsatz? *</option>
+          <option value="unter-5k">Unter CHF 5'000</option>
+          <option value="5k-15k">CHF 5'000 – 15'000</option>
+          <option value="15k-50k">CHF 15'000 – 50'000</option>
+          <option value="ueber-50k">Über CHF 50'000</option>
+        </select>
+        <select name="budget" required>
+          <option value="">Was ist dein monatliches Marketingbudget? *</option>
+          <option value="unter-2500">Unter CHF 2'500</option>
+          <option value="2500-4000">CHF 2'500 – 4'000</option>
+          <option value="4000-7000">CHF 4'000 – 7'000</option>
+          <option value="ueber-7000">Über CHF 7'000</option>
+        </select>
+        <select name="ziel" required>
+          <option value="">Was ist dein Hauptziel? *</option>
           <option value="mehr-kunden">Mehr Kunden gewinnen</option>
           <option value="mehr-reichweite">Mehr Reichweite aufbauen</option>
           <option value="content-erstellen">Professionellen Content erstellen</option>
@@ -698,7 +729,7 @@
 
   <!-- ─── FOOTER ─── -->
   <footer class="lp-footer">
-    <p>© 2026 MarkenDing – Social Media Koyuncu, Einzelfirma &nbsp;·&nbsp; <a href="pages/impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="pages/datenschutz.html">Datenschutz</a></p>
+    <p>© 2026 MarkenDing &nbsp;·&nbsp; <a href="pages/impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="pages/datenschutz.html">Datenschutz</a></p>
   </footer>
 
   <script>
