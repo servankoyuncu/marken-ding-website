@@ -687,6 +687,11 @@
       <p>Trag dich jetzt ein. Wir melden uns innert 24 Stunden und zeigen dir, was für dein Business möglich ist. Kostenlos und unverbindlich.</p>
       <form class="lp-form" method="POST" action="/.netlify/functions/contact">
         <input type="hidden" name="_source" value="Landingpage">
+        <input type="hidden" name="_t" id="_t_lp">
+        <!-- Honeypot: must stay empty -->
+        <div style="position:absolute;left:-9999px;opacity:0;pointer-events:none;" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
         <div class="form-row-2">
           <input type="text" name="name" placeholder="Dein Name *" required>
           <input type="text" name="unternehmen" placeholder="Dein Unternehmen *" required>
@@ -736,6 +741,7 @@
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.getElementById('_t_lp').value = Date.now();
   </script>
 </body>
 </html>

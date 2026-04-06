@@ -6,6 +6,19 @@ exports.handler = async (event) => {
   }
 
   const params = new URLSearchParams(event.body);
+
+  // Honeypot: bots fill hidden fields, humans don't see them
+  const honeypot = params.get("website") || "";
+  if (honeypot) {
+    return { statusCode: 200, body: "OK" };
+  }
+
+  // Timing check: real humans take at least 3 seconds to fill out a form
+  const timestamp = parseInt(params.get("_t") || "0", 10);
+  if (timestamp && Date.now() - timestamp < 3000) {
+    return { statusCode: 200, body: "OK" };
+  }
+
   const name = params.get("name") || "";
   const email = params.get("email") || "";
   const telefon = params.get("telefon") || "";
@@ -15,6 +28,37 @@ exports.handler = async (event) => {
   const umsatz = params.get("umsatz") || "";
   const budget = params.get("budget") || "";
   const source = params.get("_source") || "Website";
+  const ip = event.headers["x-forwarded-for"]?.split(",")[0].trim() || event.headers["client-ip"] || "unbekannt";
+  const userAgent = event.headers["user-agent"] || "";
+  const referrer = event.headers["referer"] || event.headers["referrer"] || "Direkt";
+
+  // Simple browser & OS detection
+  const browser =
+    /Edg\//.test(userAgent) ? "Edge" :
+    /OPR\/|Opera/.test(userAgent) ? "Opera" :
+    /Chrome\//.test(userAgent) ? "Chrome" :
+    /Firefox\//.test(userAgent) ? "Firefox" :
+    /Safari\//.test(userAgent) ? "Safari" : "Unbekannt";
+
+  const os =
+    /iPhone/.test(userAgent) ? "iPhone (iOS)" :
+    /iPad/.test(userAgent) ? "iPad (iOS)" :
+    /Android/.test(userAgent) ? "Android" :
+    /Windows/.test(userAgent) ? "Windows" :
+    /Mac OS X/.test(userAgent) ? "macOS" :
+    /Linux/.test(userAgent) ? "Linux" : "Unbekannt";
+
+  // Date & time (Swiss format)
+  const now = new Date();
+  const datetime = now.toLocaleString("de-CH", { timeZone: "Europe/Zurich", dateStyle: "full", timeStyle: "short" });
+
+  // IP Geolocation
+  let geoInfo = "–";
+  try {
+    const geoRes = await fetch(`https://ipapi.co/${ip}/json/`);
+    const geo = await geoRes.json();
+    if (geo.city) geoInfo = `${geo.city}, ${geo.region}, ${geo.country_name}`;
+  } catch (_) { /* ignore */ }
 
   const transporter = nodemailer.createTransport({
     host: "smtp.ionos.de",
@@ -52,6 +96,16 @@ exports.handler = async (event) => {
         ${budget ? `<tr><td style="padding: 0.6rem 0; color: #888;">Marketingbudget</td><td style="padding: 0.6rem 0;">${budgetLabels[budget] || budget}</td></tr>` : ""}
         ${service ? `<tr><td style="padding: 0.6rem 0; color: #888;">Interesse</td><td style="padding: 0.6rem 0;">${service}</td></tr>` : ""}
         ${nachricht ? `<tr><td style="padding: 0.6rem 0; color: #888; vertical-align: top;">Nachricht</td><td style="padding: 0.6rem 0;">${nachricht}</td></tr>` : ""}
+      </table>
+      <hr style="border: none; border-top: 1px solid #222; margin: 1.5rem 0;">
+      <p style="color: #555; font-size: 0.75rem; margin: 0 0 0.5rem;">Technische Details</p>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem; color: #555;">
+        <tr><td style="padding: 0.4rem 0; width: 140px;">Datum & Uhrzeit</td><td style="padding: 0.4rem 0;">${datetime}</td></tr>
+        <tr><td style="padding: 0.4rem 0;">Standort</td><td style="padding: 0.4rem 0;">${geoInfo}</td></tr>
+        <tr><td style="padding: 0.4rem 0;">IP-Adresse</td><td style="padding: 0.4rem 0;">${ip}</td></tr>
+        <tr><td style="padding: 0.4rem 0;">Browser</td><td style="padding: 0.4rem 0;">${browser}</td></tr>
+        <tr><td style="padding: 0.4rem 0;">Gerät / OS</td><td style="padding: 0.4rem 0;">${os}</td></tr>
+        <tr><td style="padding: 0.4rem 0;">Referrer</td><td style="padding: 0.4rem 0;">${referrer}</td></tr>
       </table>
     </div>
   `;
