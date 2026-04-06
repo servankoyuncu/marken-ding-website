@@ -7,15 +7,48 @@ exports.handler = async (event) => {
 
   const params = new URLSearchParams(event.body);
 
+  // Blocked IPs
+  const blockedIPs = [
+    "80.94.95.202",
+  ];
+  const requestIP = event.headers["x-forwarded-for"]?.split(",")[0].trim() || event.headers["client-ip"] || "";
+  if (blockedIPs.includes(requestIP)) {
+    return { statusCode: 200, body: "OK" };
+  }
+
+  // Cloudflare Turnstile verification
+  const turnstileToken = params.get("cf-turnstile-response") || "";
+  if (!turnstileToken) {
+    return { statusCode: 200, body: "OK" };
+  }
+  try {
+    const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        secret: process.env.TURNSTILE_SECRET,
+        response: turnstileToken,
+        remoteip: requestIP,
+      }),
+    });
+    const verifyData = await verifyRes.json();
+    if (!verifyData.success) {
+      return { statusCode: 200, body: "OK" };
+    }
+  } catch (_) {
+    return { statusCode: 200, body: "OK" };
+  }
+
   // Honeypot: bots fill hidden fields, humans don't see them
   const honeypot = params.get("website") || "";
   if (honeypot) {
     return { statusCode: 200, body: "OK" };
   }
 
-  // Timing check: real humans take at least 3 seconds to fill out a form
+  // Timing check: reject if _t is missing (direct POST), too fast (bot), or too old (replay)
   const timestamp = parseInt(params.get("_t") || "0", 10);
-  if (timestamp && Date.now() - timestamp < 3000) {
+  const age = Date.now() - timestamp;
+  if (!timestamp || age < 3000 || age > 7200000) {
     return { statusCode: 200, body: "OK" };
   }
 
