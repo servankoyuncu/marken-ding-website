@@ -319,7 +319,7 @@ nav {
   padding: 0 2rem;
 }
 .logos-track img {
-  height: 36px;
+  height: 47px;
   opacity: 0.4;
   filter: brightness(0) invert(1);
   transition: opacity 0.3s, transform 0.3s;
