@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="de-CH">
+<html class="dark scroll-smooth" lang="de-CH">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MarkenDing | Social Media Agentur Zürich — Content, Reels & Strategie</title>
-  <meta name="description" content="MarkenDing ist deine Social Media Agentur aus Zürich. Wir erstellen Content, Reels und Strategien, die Kunden bringen — nicht nur Likes. 120M+ Views für unsere Kunden.">
-  <meta name="keywords" content="Social Media Agentur Zürich, Content Creation, Reels, Video Editing, Social Media Management, MarkenDing">
-  <meta name="author" content="MarkenDing">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MarkenDing | Dein Wachstum ist unser Ding</title>
+  <meta name="description" content="MarkenDing ist eine Social Media Agentur aus Zürich. Wir helfen Schweizer Unternehmen mit Content, Reels und Strategie, auf Social Media echte Kunden zu gewinnen.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.marken-ding.com/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="MarkenDing | Social Media Agentur Zürich">
-  <meta property="og:description" content="Wir verwandeln Social Media in deinen stärksten Verkaufskanal. 120M+ Views, 20'000+ Leads generiert.">
+  <meta property="og:description" content="Social Media, das echte Kunden bringt — mit Strategie, Content und Video-Editing. 120M+ Views, 20'000+ qualifizierte Leads für Schweizer Unternehmen.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.marken-ding.com/">
   <meta property="og:image" content="https://www.marken-ding.com/assets/images/og-image.png">
@@ -21,7 +19,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MarkenDing | Social Media Agentur Zürich">
-  <meta name="twitter:description" content="Content, Reels & Strategie die Kunden bringt. 120M+ Views für unsere Kunden.">
+  <meta name="twitter:description" content="Social Media, das echte Kunden bringt — mit Strategie, Content und Video-Editing.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/logo.png">
@@ -30,10 +28,565 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#131313",
+            surface: "#131313",
+            "surface-dim": "#131313",
+            "surface-bright": "#3a3939",
+            "surface-variant": "#353534",
+            "surface-container": "#201f1f",
+            "surface-container-low": "#1c1b1b",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-container-high": "#2a2a2a",
+            "surface-container-highest": "#353534",
+            primary: "#e9c086",
+            "primary-container": "#af8b55",
+            "on-primary": "#442b00",
+            "on-primary-container": "#3b2500",
+            secondary: "#c6c6c7",
+            "secondary-container": "#454747",
+            "on-secondary": "#2f3131",
+            tertiary: "#c8c6c5",
+            "on-tertiary": "#313030",
+            "on-surface": "#e5e2e1",
+            "on-surface-variant": "#d2c4b6",
+            "on-background": "#e5e2e1",
+            outline: "#9b8f81",
+            "outline-variant": "#4e453a",
+            error: "#ffb4ab",
+            "error-container": "#93000a",
+            "on-error": "#690005",
+            "on-error-container": "#ffdad6",
+            bronze: "#a17e4a",
+            obsidian: "#0a0a0a",
+            "dim-gray": "#333333",
+            "stark-white": "#ffffff",
+          },
+          fontFamily: {
+            display: ["Montserrat", "sans-serif"],
+            heading: ["Montserrat", "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+          fontSize: {
+            "display-lg": ["100px", { lineHeight: "0.9", letterSpacing: "-0.04em", fontWeight: "900" }],
+            "display-md": ["64px", { lineHeight: "1.0", letterSpacing: "-0.04em", fontWeight: "900" }],
+            "headline-xl": ["56px", { lineHeight: "1.1", letterSpacing: "-0.03em", fontWeight: "800" }],
+            "headline-lg": ["32px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+            "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+            "label-bold": ["14px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "700" }],
+            "stat-number": ["80px", { lineHeight: "1.0", letterSpacing: "-0.04em", fontWeight: "900" }],
+          },
+          spacing: {
+            "section-gap": "160px",
+            "container-max": "1280px",
+            "margin-mobile": "20px",
+            gutter: "32px",
+          },
+          borderRadius: {
+            DEFAULT: "0",
+            lg: "0",
+            xl: "0",
+            full: "9999px",
+          },
+          animation: {
+            reveal: "reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+          },
+          keyframes: {
+            reveal: {
+              "0%": { opacity: "0", transform: "translateY(40px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="text-stark-white font-body overflow-x-hidden">
+
+  <!-- WebGL Background -->
+  <div id="canvas-container"></div>
+
+  <div class="content-wrapper">
+    <!-- HEADER -->
+    <header class="fixed top-0 w-full z-50 header-floating transition-all duration-300">
+      <div class="flex justify-between items-center px-margin-mobile md:px-8 py-4 max-w-container-max mx-auto">
+        <div class="flex items-center gap-4">
+          <button class="md:hidden text-stark-white hover:text-bronze transition-colors duration-200" aria-label="Menü öffnen">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <a class="flex items-center gap-3" href="index.html">
+            <img alt="MarkenDing Logo" class="h-10 w-10 object-contain" src="assets/images/logo.png">
+            <span class="font-heading text-2xl font-black text-stark-white tracking-tighter hidden md:block uppercase">MarkenDing</span>
+          </a>
+        </div>
+        <nav class="hidden md:flex items-center gap-10 font-label-bold text-label-bold uppercase tracking-widest">
+          <a class="text-bronze transition-colors duration-200" href="index.html">Home</a>
+          <a class="text-stark-white hover:text-bronze transition-colors duration-200" href="pages/about.html">Über uns</a>
+          <a class="text-stark-white hover:text-bronze transition-colors duration-200" href="pages/angebot.html">Angebot</a>
+          <a class="text-stark-white hover:text-bronze transition-colors duration-200" href="pages/blog.html">Blog</a>
+        </nav>
+        <a class="btn-brutal bg-bronze/10 border border-bronze text-bronze px-6 py-3 font-label-bold uppercase tracking-widest hover:bg-bronze hover:text-obsidian flex items-center gap-2" href="pages/kontakt.html">
+          Kontakt
+        </a>
+      </div>
+    </header>
+
+    <main class="pt-[160px] md:pt-[220px]">
+      <!-- HERO -->
+      <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-section-gap relative">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+          <div class="md:col-span-9 flex flex-col items-start space-y-8 relative z-10 reveal-on-scroll">
+            <div class="border-l-4 border-bronze pl-4 py-1">
+              <span class="font-label-bold text-label-bold text-secondary uppercase tracking-[0.2em]">Social Media Agentur aus Zürich</span>
+            </div>
+            <h1 class="font-display text-display-md md:text-display-lg tracking-tighter uppercase leading-[0.85]">
+              Dein<br/>Wachstum<br/>ist unser <span class="gold-glow-text font-black italic lowercase" data-text="ding.">ding.</span>
+            </h1>
+            <p class="font-body text-body-lg text-tertiary max-w-xl text-lg md:text-xl border-l border-dim-gray pl-6 py-2">
+              Wir helfen Schweizer Unternehmen, auf Social Media sichtbar zu werden — mit Videos, die gefühlt werden, und Strategien, die Kunden bringen, nicht nur Likes.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 pt-8 w-full sm:w-auto">
+              <a class="btn-brutal bg-bronze text-obsidian px-8 py-5 font-label-bold text-center uppercase tracking-widest flex items-center justify-center gap-3 w-full sm:w-auto group" href="pages/kontakt.html">
+                Erstgespräch
+                <span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+              <a class="btn-brutal border border-dim-gray bg-obsidian/50 backdrop-blur-sm text-stark-white px-8 py-5 font-label-bold text-center uppercase tracking-widest hover:border-bronze hover:text-bronze flex items-center justify-center gap-3 w-full sm:w-auto group" href="#results">
+                Arbeiten ansehen
+                <span class="material-symbols-outlined transform group-hover:translate-y-1 transition-transform">south</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Abstract decorative element -->
+        <div class="hidden md:block absolute right-0 top-0 w-1/3 h-full border-r border-b border-bronze/20 pointer-events-none opacity-50"></div>
+      </section>
+
+      <!-- STATS -->
+      <section class="border-y border-dim-gray bg-obsidian/40 backdrop-blur-md relative z-10">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-20 reveal-on-scroll">
+          <p class="text-center font-label-bold text-label-bold text-bronze mb-16 uppercase tracking-[0.2em]">Vertraut von Unternehmen in der ganzen Schweiz</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 text-center md:divide-x divide-dim-gray">
+            <div class="py-4 md:py-8 brutal-border bg-obsidian/60 md:bg-transparent md:border-0 p-8 md:p-0">
+              <h3 class="font-display text-stat-number text-stark-white mb-4 tracking-tighter">120M<span class="text-bronze">+</span></h3>
+              <p class="font-label-bold text-label-bold text-secondary uppercase tracking-widest">Views für unsere Kunden</p>
+            </div>
+            <div class="py-4 md:py-8 brutal-border bg-obsidian/60 md:bg-transparent md:border-0 p-8 md:p-0 md:-translate-y-4">
+              <h3 class="font-display text-stat-number text-stark-white mb-4 tracking-tighter">20'000<span class="text-bronze">+</span></h3>
+              <p class="font-label-bold text-label-bold text-secondary uppercase tracking-widest">qualifizierte Leads</p>
+            </div>
+            <div class="py-4 md:py-8 brutal-border bg-obsidian/60 md:bg-transparent md:border-0 p-8 md:p-0">
+              <h3 class="font-display text-stat-number text-stark-white mb-4 tracking-tighter">500M<span class="text-bronze">+</span></h3>
+              <p class="font-label-bold text-label-bold text-secondary uppercase tracking-widest">Impressionen</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap relative z-10">
+        <div class="mb-20 reveal-on-scroll">
+          <div class="section-accent">
+            <span class="font-label-bold text-label-bold text-bronze uppercase tracking-[0.2em]">Warum MarkenDing</span>
+          </div>
+          <h2 class="font-display text-headline-xl mb-6 uppercase tracking-tight max-w-4xl leading-[1.1]">Ein ganzes Team,<br/>für <span class="text-bronze italic lowercase">CHF 36'000.–</span></h2>
+          <p class="font-body text-body-lg text-secondary max-w-2xl border-l border-bronze/30 pl-6 py-2">Ein internes Social-Media-Team kostet schnell CHF 168'000.– und mehr pro Jahr. Wir bieten das gleiche Spektrum ab CHF 36'000.– an — ohne Gehaltsabrechnung, ohne Einarbeitung, ohne Ausfälle.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+          <!-- Bad Box -->
+          <div class="brutal-border bg-obsidian/80 backdrop-blur-sm p-10 md:p-14 flex flex-col h-full reveal-on-scroll">
+            <div class="mb-12 border-b border-dim-gray pb-8">
+              <h3 class="font-display text-headline-lg mb-4 uppercase text-secondary">Ohne MarkenDing</h3>
+              <p class="font-display text-[56px] leading-none mb-4 tracking-tighter line-through opacity-50">CHF 168'000.–</p>
+              <p class="text-tertiary font-label-bold text-label-bold uppercase tracking-widest">pro Jahr Minimum</p>
+            </div>
+            <ul class="space-y-6 flex-grow font-body text-secondary">
+              <li class="flex justify-between items-center border-b border-dim-gray/50 pb-4">
+                <span>Marketing Mitarbeiter</span>
+                <span class="text-stark-white font-bold">ab CHF 5'000/mt.</span>
+              </li>
+              <li class="flex justify-between items-center border-b border-dim-gray/50 pb-4">
+                <span>Social Media Manager</span>
+                <span class="text-stark-white font-bold">ab CHF 5'000/mt.</span>
+              </li>
+              <li class="flex justify-between items-center border-b border-dim-gray/50 pb-4">
+                <span>Community Management</span>
+                <span class="text-stark-white font-bold">ab CHF 1'000/mt.</span>
+              </li>
+              <li class="flex justify-between items-center border-b border-dim-gray/50 pb-4">
+                <span>Video Editor</span>
+                <span class="text-stark-white font-bold">ab CHF 3'000/mt.</span>
+              </li>
+              <li class="flex justify-between items-center pt-8 mt-4">
+                <span>24/7 Verfügbarkeit</span>
+                <span class="text-error flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-sm">close</span> Nicht möglich</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Good Box -->
+          <div class="brutal-border border-bronze bg-obsidian p-10 md:p-14 flex flex-col h-full relative overflow-hidden md:-translate-y-4 md:ml-[-40px] z-20 shadow-[0_0_50px_rgba(161,126,74,0.1)] reveal-on-scroll">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-bronze/10 rounded-full blur-3xl"></div>
+            <div class="absolute top-0 right-0 bg-bronze text-obsidian font-label-bold text-label-bold px-6 py-3 uppercase tracking-widest border-b border-l border-obsidian">Empfohlen</div>
+            <div class="mb-12 border-b border-bronze/30 pb-8 relative z-10">
+              <h3 class="font-display text-headline-lg mb-4 uppercase text-stark-white">Mit MarkenDing</h3>
+              <p class="font-display text-[64px] leading-none text-bronze mb-4 tracking-tighter">Ab CHF 36'000.–</p>
+              <p class="text-primary font-label-bold text-label-bold uppercase tracking-widest">pro Jahr — alles inklusive</p>
+            </div>
+            <ul class="space-y-8 flex-grow font-body text-stark-white relative z-10">
+              <li class="flex items-start gap-6">
+                <span class="material-symbols-outlined text-bronze text-2xl">done_all</span>
+                <span class="text-lg">Marketing Strategie</span>
+              </li>
+              <li class="flex items-start gap-6">
+                <span class="material-symbols-outlined text-bronze text-2xl">done_all</span>
+                <span class="text-lg">Social Media Management</span>
+              </li>
+              <li class="flex items-start gap-6">
+                <span class="material-symbols-outlined text-bronze text-2xl">done_all</span>
+                <span class="text-lg">Community Management</span>
+              </li>
+              <li class="flex items-start gap-6">
+                <span class="material-symbols-outlined text-bronze text-2xl">done_all</span>
+                <span class="text-lg">Professionelles Video-Editing</span>
+              </li>
+              <li class="flex items-start gap-6">
+                <span class="material-symbols-outlined text-bronze text-2xl">done_all</span>
+                <span class="text-lg font-bold text-bronze">24/7 Verfügbarkeit</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap relative z-10">
+        <div class="mb-20 reveal-on-scroll">
+          <div class="section-accent">
+            <span class="font-label-bold text-label-bold text-bronze uppercase tracking-[0.2em]">Unsere Services</span>
+          </div>
+          <h2 class="font-display text-headline-xl mb-6 uppercase tracking-tight">Alles aus <span class="text-bronze italic lowercase">einer</span> Hand.</h2>
+          <p class="font-body text-body-lg text-secondary max-w-2xl border-l border-bronze/30 pl-6 py-2">Von der Strategie bis zum fertigen Reel — wir arbeiten pragmatisch, schnell und mit Fokus auf Resultate.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="brutal-border bg-obsidian/60 backdrop-blur-sm p-10 flex flex-col items-start reveal-on-scroll hover:bg-obsidian transition-colors duration-300">
+            <span class="material-symbols-outlined text-bronze text-[48px] mb-8 font-light">edit_document</span>
+            <h3 class="font-display text-2xl mb-4 uppercase">Skripts &amp; Storytelling</h3>
+            <p class="text-secondary font-body leading-relaxed">Wir schreiben keine Texte, die nur gut klingen — wir bauen Sätze, die den Zuschauer halten. Jede Idee wird auf deine Marke zugeschnitten.</p>
+          </div>
+          <div class="brutal-border bg-obsidian/60 backdrop-blur-sm p-10 flex flex-col items-start reveal-on-scroll hover:bg-obsidian transition-colors duration-300 lg:translate-y-8">
+            <span class="material-symbols-outlined text-bronze text-[48px] mb-8 font-light">movie_edit</span>
+            <h3 class="font-display text-2xl mb-4 uppercase">Video Editing &amp; Reels</h3>
+            <p class="text-secondary font-body leading-relaxed">Cuts, Sounddesign, Untertitel und Rhythmus — abgestimmt auf Instagram, TikTok und YouTube Shorts. So, dass dein Video bis zum Ende geschaut wird.</p>
+          </div>
+          <div class="brutal-border bg-obsidian/60 backdrop-blur-sm p-10 flex flex-col items-start reveal-on-scroll hover:bg-obsidian transition-colors duration-300">
+            <span class="material-symbols-outlined text-bronze text-[48px] mb-8 font-light">monitoring</span>
+            <h3 class="font-display text-2xl mb-4 uppercase">Datenanalyse &amp; Strategie</h3>
+            <p class="text-secondary font-body leading-relaxed">Jede Woche Report, jeden Monat Strategie-Check. Wir schauen, was wirklich funktioniert — und passen deinen Content-Mix gezielt an.</p>
+          </div>
+          <div class="brutal-border bg-obsidian/60 backdrop-blur-sm p-10 flex flex-col items-start reveal-on-scroll hover:bg-obsidian transition-colors duration-300 lg:-translate-y-8">
+            <span class="material-symbols-outlined text-bronze text-[48px] mb-8 font-light">forum</span>
+            <h3 class="font-display text-2xl mb-4 uppercase">Community Management</h3>
+            <p class="text-secondary font-body leading-relaxed">Wir antworten auf Kommentare und Direktnachrichten im Ton deiner Marke. Nicht als Chatbot, sondern als menschliche Stimme, die Vertrauen aufbaut.</p>
+          </div>
+          <div class="brutal-border bg-obsidian/60 backdrop-blur-sm p-10 flex flex-col items-start reveal-on-scroll hover:bg-obsidian transition-colors duration-300">
+            <span class="material-symbols-outlined text-bronze text-[48px] mb-8 font-light">campaign</span>
+            <h3 class="font-display text-2xl mb-4 uppercase">Social Media Management</h3>
+            <p class="text-secondary font-body leading-relaxed">Kalender, Postings, Captions und Auswertungen — wir übernehmen den operativen Alltag auf Instagram, TikTok und LinkedIn.</p>
+          </div>
+          <div class="brutal-border bg-obsidian/60 backdrop-blur-sm p-10 flex flex-col items-start reveal-on-scroll hover:bg-obsidian transition-colors duration-300 lg:translate-y-8">
+            <span class="material-symbols-outlined text-bronze text-[48px] mb-8 font-light">brush</span>
+            <h3 class="font-display text-2xl mb-4 uppercase">Grafik Design &amp; Branding</h3>
+            <p class="text-secondary font-body leading-relaxed">Von Feed-Grafiken bis zum kompletten Markenauftritt: Wir sorgen dafür, dass du überall wiedererkennbar bist — ohne billig zu wirken.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULTS -->
+      <section class="border-y border-dim-gray bg-obsidian/90 relative z-10" id="results">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-5 flex items-center justify-center">
+          <span class="font-display text-[30vw] leading-none whitespace-nowrap uppercase">Results</span>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap relative">
+          <div class="mb-20 md:text-center reveal-on-scroll flex flex-col items-center">
+            <div class="section-accent centered w-full max-w-2xl">
+              <span class="font-label-bold text-label-bold text-bronze uppercase tracking-[0.2em]">Echte Ergebnisse</span>
+            </div>
+            <h2 class="font-display text-headline-xl mb-6 uppercase tracking-tight">Zahlen, die <span class="text-bronze italic lowercase">sprechen.</span></h2>
+            <p class="font-body text-body-lg text-secondary max-w-2xl mx-auto">Unsere Arbeit bringt messbare Resultate. Hier sind einige Highlights unserer bisherigen Projekte.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-7 brutal-border bg-obsidian p-12 md:p-16 flex flex-col justify-center reveal-on-scroll relative overflow-hidden group">
+              <div class="absolute inset-0 bg-bronze/5 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-out"></div>
+              <span class="font-label-bold text-label-bold text-tertiary uppercase tracking-widest mb-8 block border-b border-dim-gray pb-4 relative z-10">Case Study: Menace Burger</span>
+              <h3 class="font-display text-[80px] md:text-[120px] text-stark-white mb-2 leading-none tracking-tighter relative z-10">1'200</h3>
+              <p class="font-display text-2xl md:text-3xl mb-8 text-bronze uppercase relative z-10">Menüs an einem Sonntag</p>
+              <p class="text-secondary font-body max-w-md relative z-10 border-l-2 border-bronze pl-4">Nach einer Kampagne für Menace Burger kamen so viele Kunden, dass an einem Sonntag ein Tagesrekord gebrochen wurde.</p>
+            </div>
+            <div class="md:col-span-5 flex flex-col gap-8">
+              <div class="brutal-border bg-obsidian p-10 flex-1 flex flex-col justify-center reveal-on-scroll hover:border-bronze transition-colors">
+                <h4 class="font-display text-[56px] text-bronze mb-4 leading-none tracking-tighter">120M<span class="text-stark-white">+</span></h4>
+                <p class="font-label-bold text-label-bold uppercase text-stark-white mb-4 tracking-widest">Views</p>
+                <p class="text-secondary text-sm">Insgesamt über 120 Millionen Views für unsere Kunden — durch organische Reichweite und gezieltes Paid Social.</p>
+              </div>
+              <div class="brutal-border bg-obsidian p-10 flex-1 flex flex-col justify-center reveal-on-scroll hover:border-bronze transition-colors">
+                <h4 class="font-display text-[56px] text-bronze mb-4 leading-none tracking-tighter">20'000<span class="text-stark-white">+</span></h4>
+                <p class="font-label-bold text-label-bold uppercase text-stark-white mb-4 tracking-widest">qualifizierte Leads</p>
+                <p class="text-secondary text-sm">Mit automatisierten Anfrageprozessen und CRM-Anbindung haben wir über 20'000 echte Anfragen generiert.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap relative z-10">
+        <div class="mb-20 reveal-on-scroll">
+          <div class="section-accent">
+            <span class="font-label-bold text-label-bold text-bronze uppercase tracking-[0.2em]">Kundenstimmen</span>
+          </div>
+          <h2 class="font-display text-headline-xl uppercase tracking-tight">Was unsere Kunden <span class="text-bronze italic lowercase">sagen.</span></h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+          <div class="brutal-border bg-obsidian/60 backdrop-blur-sm p-10 md:p-14 reveal-on-scroll relative">
+            <span class="material-symbols-outlined absolute top-8 right-8 text-bronze/20 text-[80px] font-light">format_quote</span>
+            <p class="font-body text-xl md:text-2xl mb-12 leading-relaxed text-stark-white relative z-10 font-light italic">«Seit MarkenDing unsere Videos macht, kommen regelmässig Kunden in die Bäckerei und sagen: «Ich habe euch auf TikTok gesehen.» Das merken wir direkt am Umsatz.»</p>
+            <div class="flex items-center gap-6 border-t border-dim-gray pt-8">
+              <div class="w-14 h-14 bg-bronze/10 border border-bronze/50 flex items-center justify-center font-label-bold text-bronze text-lg">MG</div>
+              <div>
+                <p class="font-label-bold text-label-bold text-stark-white uppercase tracking-widest mb-1">Marcel Gerber</p>
+                <p class="text-secondary text-sm">Inhaber, HolzofenBeck</p>
+              </div>
+            </div>
+          </div>
+          <div class="brutal-border bg-obsidian/60 backdrop-blur-sm p-10 md:p-14 reveal-on-scroll relative md:translate-y-12">
+            <span class="material-symbols-outlined absolute top-8 right-8 text-bronze/20 text-[80px] font-light">format_quote</span>
+            <p class="font-body text-xl md:text-2xl mb-12 leading-relaxed text-stark-white relative z-10 font-light italic">«Wir haben MarkenDing mit der Vermarktung unseres Events beauftragt — das lief von der Content-Idee bis zum Live-Posting. Das Ergebnis war ein ausverkaufter Saal und eine Menge neuer Follower.»</p>
+            <div class="flex items-center gap-6 border-t border-dim-gray pt-8">
+              <div class="w-14 h-14 bg-bronze/10 border border-bronze/50 flex items-center justify-center font-label-bold text-bronze text-lg">BB</div>
+              <div>
+                <p class="font-label-bold text-label-bold text-stark-white uppercase tracking-widest mb-1">Benjamin Brander</p>
+                <p class="text-secondary text-sm">CEO, 360 MMA &amp; Time To Shine</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="brutal-border border-y border-bronze bg-obsidian py-40 relative z-10 overflow-hidden">
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 text-[400px] font-black text-bronze opacity-5 pointer-events-none select-none italic leading-none">&amp;</div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center flex flex-col items-center reveal-on-scroll relative z-10">
+          <span class="font-label-bold text-label-bold uppercase tracking-[0.3em] block mb-8 text-bronze">Bereit für mehr?</span>
+          <h2 class="font-display text-display-md md:text-display-lg mb-10 max-w-4xl tracking-tighter uppercase leading-[0.9]">
+            Lass uns dein nächstes <br/><span class="gold-glow-text italic lowercase" data-text="ding">ding</span> starten.
+          </h2>
+          <p class="font-body text-xl mb-16 max-w-2xl text-secondary">Unverbindliches Erstgespräch — wir zeigen dir, wie Social Media dein Business nach vorne bringt.</p>
+          <a class="btn-brutal bg-bronze text-obsidian px-12 py-6 font-label-bold uppercase tracking-widest hover:bg-stark-white transition-colors duration-300 flex items-center gap-4 text-lg" href="pages/kontakt.html">
+            Jetzt Erstgespräch buchen
+            <span class="material-symbols-outlined text-2xl">arrow_forward</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-obsidian w-full py-20 border-t border-dim-gray text-stark-white relative z-10">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+          <div class="md:col-span-1 flex flex-col items-start space-y-6">
+            <a class="flex items-center gap-4 mb-4" href="index.html">
+              <img alt="MarkenDing Logo" class="h-12 w-12 object-contain" src="assets/images/logo.png">
+              <span class="font-display text-2xl font-black uppercase tracking-tighter">MarkenDing</span>
+            </a>
+            <p class="text-secondary font-body text-sm leading-relaxed border-l border-bronze/30 pl-4">Social Media, das Kunden bringt — gemacht in Zürich.</p>
+            <div class="flex gap-6 pt-6">
+              <a class="text-secondary hover:text-bronze transition-colors duration-300 font-label-bold border border-dim-gray p-3 hover:border-bronze" href="https://www.instagram.com/marken.ding/" target="_blank" rel="noopener" title="Instagram">IG</a>
+              <a class="text-secondary hover:text-bronze transition-colors duration-300 font-label-bold border border-dim-gray p-3 hover:border-bronze" href="https://www.tiktok.com/@markending101" target="_blank" rel="noopener" title="TikTok">TT</a>
+              <a class="text-secondary hover:text-bronze transition-colors duration-300 font-label-bold border border-dim-gray p-3 hover:border-bronze" href="https://www.linkedin.com/company/markendingens/" target="_blank" rel="noopener" title="LinkedIn">IN</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-label-bold text-label-bold uppercase tracking-[0.2em] text-bronze mb-8 flex items-center gap-2">
+              <span class="h-[1px] w-4 bg-bronze block"></span> Unternehmen
+            </h4>
+            <ul class="flex flex-col items-start space-y-4 font-body">
+              <li><a class="text-secondary hover:text-stark-white hover:pl-2 transition-all duration-300 uppercase text-sm tracking-wider" href="pages/about.html">Über uns</a></li>
+              <li><a class="text-secondary hover:text-stark-white hover:pl-2 transition-all duration-300 uppercase text-sm tracking-wider" href="pages/blog.html">Blog</a></li>
+              <li><a class="text-secondary hover:text-stark-white hover:pl-2 transition-all duration-300 uppercase text-sm tracking-wider" href="pages/kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-label-bold text-label-bold uppercase tracking-[0.2em] text-bronze mb-8 flex items-center gap-2">
+              <span class="h-[1px] w-4 bg-bronze block"></span> Services
+            </h4>
+            <ul class="flex flex-col items-start space-y-4 font-body">
+              <li><a class="text-secondary hover:text-stark-white hover:pl-2 transition-all duration-300 uppercase text-sm tracking-wider" href="pages/angebot.html">Content Creation</a></li>
+              <li><a class="text-secondary hover:text-stark-white hover:pl-2 transition-all duration-300 uppercase text-sm tracking-wider" href="pages/angebot.html">Video Editing</a></li>
+              <li><a class="text-secondary hover:text-stark-white hover:pl-2 transition-all duration-300 uppercase text-sm tracking-wider" href="pages/angebot.html">Community Management</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-label-bold text-label-bold uppercase tracking-[0.2em] text-bronze mb-8 flex items-center gap-2">
+              <span class="h-[1px] w-4 bg-bronze block"></span> Rechtliches
+            </h4>
+            <ul class="flex flex-col items-start space-y-4 font-body">
+              <li><a class="text-secondary hover:text-stark-white hover:pl-2 transition-all duration-300 uppercase text-sm tracking-wider" href="pages/impressum.html">Impressum</a></li>
+              <li><a class="text-secondary hover:text-stark-white hover:pl-2 transition-all duration-300 uppercase text-sm tracking-wider" href="pages/datenschutz.html">Datenschutz</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-dim-gray pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-tertiary font-body uppercase tracking-widest">
+          <p>© 2026 MarkenDing. Alle Rechte vorbehalten.</p>
+          <p class="mt-4 md:mt-0 flex items-center gap-2">Gemacht in Zürich</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    // Scroll reveal
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Header background on scroll
+      const header = document.querySelector('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('bg-obsidian/90');
+          header.classList.remove('bg-obsidian/70');
+        } else {
+          header.classList.remove('bg-obsidian/90');
+          header.classList.add('bg-obsidian/70');
+        }
+      });
+    });
+
+    // WebGL Background
+    const initShader = () => {
+      const container = document.getElementById('canvas-container');
+      if (!container) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+      const renderer = new THREE.WebGLRenderer({ antialias: false, alpha: false });
+
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      const vertexShader = `
+        varying vec2 v_texCoord;
+        void main() {
+          v_texCoord = uv;
+          gl_Position = vec4(position, 1.0);
+        }
+      `;
+
+      const fragmentShader = `
+        precision highp float;
+        uniform float u_time;
+        uniform vec2 u_resolution;
+        uniform vec2 u_mouse;
+        varying vec2 v_texCoord;
+
+        void main() {
+          vec2 uv = v_texCoord;
+          vec2 mouse = u_mouse / u_resolution;
+
+          vec3 color1 = vec3(0.04, 0.04, 0.04);
+          vec3 color2 = vec3(0.08, 0.07, 0.06);
+
+          float motion = sin(uv.x * 3.0 + u_time * 0.5) * 0.1;
+          motion += cos(uv.y * 2.0 - u_time * 0.3) * 0.1;
+
+          float dist = distance(uv, mouse);
+          float glow = smoothstep(0.4, 0.0, dist) * 0.12;
+
+          float shimmer = sin(uv.x * 10.0 + uv.y * 10.0 + u_time * 1.2) * 0.5 + 0.5;
+          shimmer = pow(shimmer, 20.0) * 0.04;
+
+          vec3 goldColor = vec3(0.63, 0.49, 0.29);
+
+          vec3 finalColor = mix(color1, color2, uv.y + motion);
+          finalColor += goldColor * glow;
+          finalColor += goldColor * shimmer;
+
+          gl_FragColor = vec4(finalColor, 1.0);
+        }
+      `;
+
+      const uniforms = {
+        u_time: { value: 0.0 },
+        u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+        u_mouse: { value: new THREE.Vector2(window.innerWidth / 2, window.innerHeight / 2) }
+      };
+
+      const geometry = new THREE.PlaneGeometry(2, 2);
+      const material = new THREE.ShaderMaterial({
+        vertexShader,
+        fragmentShader,
+        uniforms
+      });
+
+      const mesh = new THREE.Mesh(geometry, material);
+      scene.add(mesh);
+
+      document.addEventListener('mousemove', (e) => {
+        uniforms.u_mouse.value.x = e.clientX;
+        uniforms.u_mouse.value.y = window.innerHeight - e.clientY;
+      });
+
+      const animate = (time) => {
+        uniforms.u_time.value = time * 0.001;
+        renderer.render(scene, camera);
+        requestAnimationFrame(animate);
+      };
+
+      window.addEventListener('resize', () => {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight);
+      });
+
+      requestAnimationFrame(animate);
+    };
+
+    if (typeof THREE !== 'undefined') {
+      initShader();
+    }
+  </script>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -71,297 +624,6 @@
     ]
   }
   </script>
-</head>
-<body>
-
-  <!-- ─── NAVIGATION ─── -->
-  <nav>
-    <a href="index.html" class="nav-logo">
-      <img src="assets/images/logo.png" alt="MarkenDing Logo">
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="pages/about.html">Über uns</a></li>
-      <li><a href="pages/angebot.html">Angebot</a></li>
-      <li><a href="pages/blog.html">Blog</a></li>
-      <li><a href="pages/kontakt.html">Kontakt</a></li>
-    </ul>
-    <button class="nav-toggle" aria-label="Menü öffnen">
-      <span></span><span></span><span></span>
-    </button>
-    <a href="pages/kontakt.html" class="nav-cta">Lass uns reden</a>
-  </nav>
-
-  <!-- ─── HERO ─── -->
-  <section class="hero">
-    <div class="hero-badge">
-      Social Media Agentur aus Zürich
-    </div>
-    <h1>Dein Wachstum<br>ist unser <em>Ding.</em></h1>
-    <p class="hero-sub">Wir verwandeln Social Media in deinen stärksten Verkaufskanal — mit Content, der Kunden bringt, nicht nur Likes.</p>
-    <div class="hero-actions">
-      <a href="pages/kontakt.html" class="btn-primary">
-        Kostenloses Erstgespräch
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <a href="#ergebnisse" class="btn-ghost">Unsere Arbeit ansehen ↓</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <h3>120M+</h3>
-        <p>Views erzielt</p>
-      </div>
-      <div class="hero-stat">
-        <h3>20'000+</h3>
-        <p>Leads generiert</p>
-      </div>
-      <div class="hero-stat">
-        <h3>500M+</h3>
-        <p>Impressionen erzielt</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── CLIENT LOGOS ─── -->
-  <section class="marquee-section">
-    <p class="marquee-label">Vertraut von Unternehmen in der ganzen Schweiz</p>
-    <div class="marquee-track">
-      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/68162a816b64741741501788_Menace%20Burger%20PNG%20T%20(1).png" alt="Menace Burger" loading="lazy">
-      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67ff9c3326277e44a9dda627_Musti%20Grill%20PNG.png" alt="MustiGrill" loading="lazy">
-      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67ff9c334517f0f15215171c_STS%20LOGO%20PNG.png" alt="STS" loading="lazy">
-      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67ff9c32596fb2c9d289aadf_Sparta%20Logo%20PNG.png" alt="Sparta" loading="lazy">
-      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67f54c74fc56ce75a2baa63a_HolzofenBeck%20PNG%20Web.png" alt="Holzofe Beck" loading="lazy">
-      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67f54c749c4b409f4ddde0b5_TTS%20PNG%20WEB.png" alt="TTS" loading="lazy">
-      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/68162a816b64741741501788_Menace%20Burger%20PNG%20T%20(1).png" alt="Menace Burger" loading="lazy">
-      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67ff9c3326277e44a9dda627_Musti%20Grill%20PNG.png" alt="MustiGrill" loading="lazy">
-      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67ff9c334517f0f15215171c_STS%20LOGO%20PNG.png" alt="STS" loading="lazy">
-      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67ff9c32596fb2c9d289aadf_Sparta%20Logo%20PNG.png" alt="Sparta" loading="lazy">
-      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67f54c74fc56ce75a2baa63a_HolzofenBeck%20PNG%20Web.png" alt="Holzofe Beck" loading="lazy">
-      <img src="https://cdn.prod.website-files.com/6787a9b98879126b2e54c201/67f54c749c4b409f4ddde0b5_TTS%20PNG%20WEB.png" alt="TTS" loading="lazy">
-    </div>
-  </section>
-
-  <!-- ─── COST COMPARISON ─── -->
-  <section class="comparison">
-    <div class="comparison-inner">
-      <div class="comparison-header reveal">
-        <span class="section-label">Warum MarkenDing</span>
-        <h2 class="section-title">Der CHF 168'000.– Job<br>für <em>CHF 36'000.–</em></h2>
-        <p>Was dich ein internes Social Media Team wirklich kostet — und was du mit MarkenDing sparst.</p>
-      </div>
-      <div class="cost-grid">
-        <div class="cost-card reveal">
-          <span class="cost-card-label">Ohne MarkenDing</span>
-          <h3>CHF 168'000.–</h3>
-          <span class="per-year">pro Jahr Minimum</span>
-          <div class="cost-item"><span>Marketing Mitarbeiter</span><span>ab CHF 5'000/mt.</span></div>
-          <div class="cost-item"><span>Social Media Manager</span><span>ab CHF 5'000/mt.</span></div>
-          <div class="cost-item"><span>Community Management</span><span>ab CHF 1'000/mt.</span></div>
-          <div class="cost-item"><span>Video Editor</span><span>ab CHF 3'000/mt.</span></div>
-          <div class="cost-item"><span>24/7 Verfügbarkeit</span><span>✗ Nicht möglich</span></div>
-        </div>
-        <div class="cost-card highlight reveal">
-          <span class="cost-card-label">Mit MarkenDing</span>
-          <h3>Ab CHF 36'000.–</h3>
-          <span class="per-year">pro Jahr — alles inklusive</span>
-          <div class="cost-item"><span>Marketing Strategie</span><span><span class="cost-check">✓</span></span></div>
-          <div class="cost-item"><span>Social Media Management</span><span><span class="cost-check">✓</span></span></div>
-          <div class="cost-item"><span>Community Management</span><span><span class="cost-check">✓</span></span></div>
-          <div class="cost-item"><span>Professionelles Video-Editing</span><span><span class="cost-check">✓</span></span></div>
-          <div class="cost-item"><span>24/7 Verfügbarkeit</span><span><span class="cost-check">✓</span></span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── SERVICES ─── -->
-  <section class="services">
-    <div class="services-inner">
-      <div class="services-header">
-        <div>
-          <span class="section-label">Unsere Services</span>
-          <h2 class="section-title">Alles aus <em>einer</em> Hand.</h2>
-        </div>
-        <p>Von der Strategie bis zum fertigen Reel — wir sind flexibel, schnell und liefern Content, der performt.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
-          </div>
-          <h3>Skripts & Storytelling</h3>
-          <p>Goldwerte Skripts, die den Unterschied machen. Wir sind überzeugt: Hinter jedem viralen Video steckt ein starkes Skript.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-          </div>
-          <h3>Video Editing & Reels</h3>
-          <p>Engagement-bringende Edits mit professionellen SFX und VFX, die dein Video auf das nächste Level bringen.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/><path d="M21 3v6h-6"/></svg>
-          </div>
-          <h3>Datenanalyse & Strategie</h3>
-          <p>Anhand der Daten wissen wir genau, wo du stehst und wie wir deinen Content stetig verbessern können.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Community Management</h3>
-          <p>Wir pflegen deine Community, beantworten Kommentare und bauen eine echte Verbindung zu deinen Kunden auf.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          </div>
-          <h3>Social Media Management</h3>
-          <p>Von der Planung bis zum Posting — wir übernehmen deine gesamte Social Media Präsenz, konsistent und professionell.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-          </div>
-          <h3>Grafik Design & Branding</h3>
-          <p>Von Social Media Grafiken bis hin zum kompletten Branding — alles aus einer Hand, alles on Brand.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── RESULTS ─── -->
-  <section class="results" id="ergebnisse">
-    <div class="results-inner">
-      <div class="results-header reveal">
-        <span class="section-label">Echte Ergebnisse</span>
-        <h2 class="section-title">Zahlen, die <em>sprechen.</em></h2>
-        <p>Unsere Arbeit bringt messbare Resultate. Hier sind einige Highlights unserer bisherigen Projekte.</p>
-      </div>
-      <div class="results-grid">
-        <div class="result-card reveal">
-          <div class="result-number">1'200</div>
-          <div class="result-label">Menüs an einem Sonntag</div>
-          <div class="result-desc">Menace Burger verzeichnete Rekordverkäufe dank unserer Social Media Kampagne.</div>
-        </div>
-        <div class="result-card reveal">
-          <div class="result-number">120M+</div>
-          <div class="result-label">Views</div>
-          <div class="result-desc">Über 120 Millionen Views für unsere Kunden erzielt — organisch und bezahlt.</div>
-        </div>
-        <div class="result-card reveal">
-          <div class="result-number">20'000+</div>
-          <div class="result-label">High-Ticket Leads</div>
-          <div class="result-desc">Generiert über automatisierte Systeme mit CRM-Integration für nachhaltiges Wachstum.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── TESTIMONIALS ─── -->
-  <section class="testimonials">
-    <div class="testimonials-inner">
-      <div class="testimonials-header reveal">
-        <span class="section-label">Kundenstimmen</span>
-        <h2 class="section-title">Was unsere Kunden <em>sagen.</em></h2>
-      </div>
-      <div class="testimonial-cards">
-        <div class="testimonial-card reveal">
-          <div class="testimonial-quote">"</div>
-          <blockquote>Die Partnerschaft mit MarkenDing hat unsere Social-Media-Präsenz erheblich gesteigert. Viele Kunden kommen wegen unserer Videos in die Bäckerei.</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">MG</div>
-            <div>
-              <div class="testimonial-name">Marcel Gerber</div>
-              <div class="testimonial-role">CEO, de Holzofe Beck</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal">
-          <div class="testimonial-quote">"</div>
-          <blockquote>Kreativ, trendig und immer am Puls der Zeit. Unser Event lag ganz in der Hand von MarkenDing — und das Vertrauen wurde uns mit ausgezeichneter Arbeit zurückgezahlt.</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">BB</div>
-            <div>
-              <div class="testimonial-name">Benjamin Brander</div>
-              <div class="testimonial-role">CEO, 360 MMA & Time To Shine</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── CTA ─── -->
-  <section class="cta-section">
-    <span class="section-label reveal">Bereit für mehr?</span>
-    <h2 class="section-title reveal">Lass uns dein nächstes<br><em>Ding</em> starten.</h2>
-    <p class="reveal">Unverbindliches Erstgespräch — wir zeigen dir, wie Social Media dein Business nach vorne bringt.</p>
-    <a href="pages/kontakt.html" class="btn-primary reveal">
-      Jetzt Erstgespräch buchen
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-  </section>
-
-  <!-- ─── FOOTER ─── -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo">
-          <img src="assets/images/logo.png" alt="MarkenDing Logo">
-        </a>
-        <p>Dein Social Media Marketing Partner aus Zürich.</p>
-        <div class="footer-social" style="margin-top: 1.5rem;">
-          <a href="https://www.instagram.com/marken.ding/" target="_blank" rel="noopener" title="Instagram">IG</a>
-          <a href="https://www.tiktok.com/@markending101" target="_blank" rel="noopener" title="TikTok">TT</a>
-          <a href="https://www.linkedin.com/company/markendingens/" target="_blank" rel="noopener" title="LinkedIn">IN</a>
-        </div>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4>Unternehmen</h4>
-          <a href="pages/about.html">Über uns</a>
-          <a href="pages/blog.html">Blog</a>
-          <a href="pages/kontakt.html">Kontakt</a>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <a href="pages/angebot.html">Content Creation</a>
-          <a href="pages/angebot.html">Video Editing</a>
-          <a href="pages/angebot.html">Community Management</a>
-        </div>
-        <div class="footer-col">
-          <h4>Rechtliches</h4>
-          <a href="pages/impressum.html">Impressum</a>
-          <a href="pages/datenschutz.html">Datenschutz</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 MarkenDing. Alle Rechte vorbehalten.</span>
-      <span>Made with ♥ in Zürich</span>
-    </div>
-  </footer>
-
-  <!-- ─── SCRIPTS ─── -->
-  <script>
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const links = document.querySelector('.nav-links');
-    if (toggle) {
-      toggle.addEventListener('click', () => {
-        links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
-      });
-    }
-  </script>
+<script src="js/main.js"></script>
 </body>
 </html>
