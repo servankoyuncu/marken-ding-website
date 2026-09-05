@@ -82,29 +82,24 @@ Netlify gibt dir sofort eine URL wie `random-name-123.netlify.app` — die Seite
 
 ## Schritt 4: Kontaktformular aktivieren
 
-Das Kontaktformular braucht einen Service, der die Daten verarbeitet. Einfachste Option:
+Das Formular in `pages/kontakt.html` ist bereits an **Netlify Forms** gebunden (`data-netlify="true"`). Es fehlen nur noch die E-Mail-Einstellungen:
 
-### Option A: Netlify Forms (kostenlos, bis 100 Submissions/Monat)
+### 4a: Benachrichtigung an euch (bei jeder Einsendung)
 
-In `pages/kontakt.html` das `<div class="contact-form">` ändern zu:
+1. Netlify: **Site settings → Forms → Form notifications**
+2. **Add notification → Email notification** → Empfänger: `contact@marken-ding.com`
 
-```html
-<form class="contact-form" name="kontakt" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="kontakt">
-  <!-- ... rest bleibt gleich, aber <div class="form-group"> bleibt -->
-```
+### 4b: Bestätigungs-Mail an Absender:innen (Auto-Reply)
 
-Und den Button ändern von `<button type="button" ...>` zu `<button type="submit" ...>`.
+Die Bestätigungs-Mail verschickt eine Netlify Function (`netlify/functions/submission-created.mjs`) über [Resend](https://resend.com) (kostenlos bis 100 Mails/Tag).
 
-### Option B: Formspree (kostenlos, bis 50/Monat)
+1. Account auf **resend.com** erstellen (kostenlos)
+2. **Domain hinzufügen:** `marken-ding.com` → Resend zeigt DNS-Einträge (DKIM/SPF) an, die du beim DNS-Provider (Netlify DNS oder dein Registrar) einträgst
+3. **API Key erstellen** (API Keys → Create)
+4. In Netlify: **Site settings → Environment variables** → Variable `RESEND_API_KEY` mit dem Key anlegen
+5. Neu deployen (git push) — fertig
 
-1. Erstelle einen Account auf formspree.io
-2. Erstelle ein neues Formular, kopiere die Form-ID
-3. Ersetze das `<div>` mit:
-
-```html
-<form class="contact-form" action="https://formspree.io/f/DEINE-ID" method="POST">
-```
+Hinweis: Ohne verifizierte Domain kann Resend nur Test-Mails an die Account-Inhaber:innen-Adresse schicken. Die Absender-Adresse der Bestätigungs-Mail (`kontakt@marken-ding.com`) steht in der Function und kann dort bei Bedarf angepasst werden.
 
 ---
 
@@ -147,7 +142,7 @@ Netlify deployed automatisch nach jedem Push — innert Sekunden ist die Änderu
 ## Noch offen / Nächste Schritte
 
 - [ ] Platzhalter-Seiten (Angebot, Blog, Impressum, Datenschutz) mit Inhalt füllen
-- [ ] Kontaktformular-Service einrichten (Netlify Forms oder Formspree)
+- [x] Kontaktformular-Service einrichten (Netlify Forms + Resend Auto-Reply, siehe Schritt 4)
 - [ ] OG-Image erstellen
 - [ ] Kundenlogos lokal speichern
 - [ ] Google Analytics oder Plausible einbinden (optional)
