@@ -168,6 +168,12 @@ body {
 .logo-marquee-group img.logo-badge {
   filter: grayscale(1) brightness(2);
 }
+/* Rectangular badge with rounded corners baked into a non-transparent image */
+.logo-marquee-group img.logo-rounded {
+  object-fit: cover;
+  border-radius: 7px;
+  filter: grayscale(1) brightness(1.15) contrast(1.6);
+}
 .logo-marquee-group img:hover {
   opacity: 1;
 }
