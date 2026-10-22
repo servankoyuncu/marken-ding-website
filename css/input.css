@@ -137,7 +137,7 @@ body {
 .logo-marquee-track {
   display: flex;
   width: max-content;
-  animation: logo-marquee 30s linear infinite;
+  animation: logo-marquee 45s linear infinite;
 }
 .logo-marquee:hover .logo-marquee-track {
   animation-play-state: paused;
