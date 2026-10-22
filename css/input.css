@@ -137,7 +137,7 @@ body {
 .logo-marquee-track {
   display: flex;
   width: max-content;
-  animation: logo-marquee 45s linear infinite;
+  animation: logo-marquee 56s linear infinite;
 }
 .logo-marquee:hover .logo-marquee-track {
   animation-play-state: paused;
@@ -158,6 +158,9 @@ body {
 }
 .logo-marquee-group img.logo-wide {
   width: 200px;
+}
+.logo-marquee-group img.logo-wordmark {
+  width: 220px;
 }
 /* Logo on an opaque black background: keep white artwork, drop the black */
 .logo-marquee-group img.logo-on-black {
@@ -192,6 +195,9 @@ body {
   }
   .logo-marquee-group img.logo-wide {
     width: 150px;
+  }
+  .logo-marquee-group img.logo-wordmark {
+    width: 160px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
