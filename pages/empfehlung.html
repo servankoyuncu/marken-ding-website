@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="de-CH">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Persönliche Empfehlung | MarkenDing</title>
+  <meta name="description" content="Du wurdest an MarkenDing empfohlen. Erfahre in wenigen Minuten, wie wir Schweizer Unternehmen auf Social Media zu mehr Kunden verhelfen.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="text-stark-white font-body overflow-x-hidden">
+  <div id="canvas-container"></div>
+  <div class="content-wrapper">
+    <header class="fixed top-0 w-full z-50 header-floating transition-all duration-300">
+      <div class="flex justify-between items-center px-margin-mobile md:px-8 py-4 max-w-container-max mx-auto">
+        <a class="flex items-center gap-3" href="/"><img alt="MarkenDing Logo" class="h-10 w-10 object-contain" src="/assets/images/logo.png"><span class="font-heading text-2xl font-black text-stark-white tracking-tighter uppercase">MarkenDing</span></a>
+        <a class="btn-brutal bg-bronze/10 border border-bronze text-bronze px-4 md:px-6 py-3 font-label-bold uppercase tracking-widest hover:bg-bronze hover:text-obsidian flex items-center gap-2 text-xs md:text-sm" href="#anfrage">Gespräch anfragen</a>
+      </div>
+    </header>
+
+    <main class="pt-[130px] md:pt-[180px]">
+      <!-- HERO + VIDEO -->
+      <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-24 relative">
+        <div class="max-w-4xl mx-auto text-center reveal-on-scroll">
+          <div id="referrer-badge" class="inline-flex items-center gap-3 border border-bronze/50 bg-bronze/10 px-5 py-3 mb-10">
+            <span class="material-symbols-outlined text-bronze text-xl">handshake</span>
+            <span class="font-label-bold text-label-bold text-stark-white uppercase tracking-[0.15em]">Persönliche Empfehlung<span id="referrer-name-wrap" class="hidden"> von <span id="referrer-name" class="text-bronze"></span></span></span>
+          </div>
+          <h1 class="font-display text-[44px] md:text-display-md tracking-tighter uppercase leading-[0.95] mb-8">
+            Mehr Kunden durch <span class="gold-glow-text italic lowercase" data-text="social media.">social media.</span>
+          </h1>
+          <p class="font-body text-body-lg text-secondary max-w-2xl mx-auto mb-14">
+            Schön, dass du hier bist. Im Video erfährst du in wenigen Minuten, wer wir sind, was wir machen und was unsere Kunden erreicht haben, seit wir ihr Social Media übernommen haben.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto reveal-on-scroll">
+          <!-- Video placeholder: replace with <video> or embed once the video is ready -->
+          <div class="relative aspect-video brutal-border border-bronze bg-obsidian/80 backdrop-blur-sm overflow-hidden flex flex-col items-center justify-center text-center p-8 shadow-[0_0_60px_rgba(161,126,74,0.12)]">
+            <div class="absolute top-0 right-0 w-48 h-48 bg-bronze/10 rounded-full blur-3xl"></div>
+            <div class="w-20 h-20 md:w-24 md:h-24 border border-bronze flex items-center justify-center mb-6 relative z-10">
+              <span class="material-symbols-outlined text-bronze text-[48px]">play_arrow</span>
+            </div>
+            <p class="font-label-bold text-label-bold text-stark-white uppercase tracking-[0.2em] mb-2 relative z-10">Video folgt in Kürze</p>
+            <p class="text-secondary text-sm font-body relative z-10">Wer wir sind, was wir tun und was wir für unsere Kunden erreicht haben.</p>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-12 reveal-on-scroll">
+          <a class="btn-brutal bg-bronze text-obsidian px-8 py-5 font-label-bold uppercase tracking-widest flex items-center justify-center gap-3 w-full sm:w-auto hover:bg-stark-white transition-colors duration-300" href="#anfrage">
+            Kostenloses Erstgespräch
+            <span class="material-symbols-outlined">arrow_downward</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- RESULTS -->
+      <section class="border-y border-dim-gray bg-obsidian/60 backdrop-blur-md relative z-10">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-24 reveal-on-scroll">
+          <p class="text-center font-label-bold text-label-bold text-bronze mb-12 uppercase tracking-[0.2em]">Was wir bisher erreicht haben</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 text-center md:divide-x divide-dim-gray mb-20">
+            <div class="py-4">
+              <p class="font-display text-[64px] md:text-stat-number text-stark-white mb-3 tracking-tighter leading-none">120M<span class="text-bronze">+</span></p>
+              <p class="font-label-bold text-label-bold text-secondary uppercase tracking-widest">Views für unsere Kunden</p>
+            </div>
+            <div class="py-4">
+              <p class="font-display text-[64px] md:text-stat-number text-stark-white mb-3 tracking-tighter leading-none">20'000<span class="text-bronze">+</span></p>
+              <p class="font-label-bold text-label-bold text-secondary uppercase tracking-widest">qualifizierte Leads</p>
+            </div>
+            <div class="py-4">
+              <p class="font-display text-[64px] md:text-stat-number text-stark-white mb-3 tracking-tighter leading-none">500M<span class="text-bronze">+</span></p>
+              <p class="font-label-bold text-label-bold text-secondary uppercase tracking-widest">Impressionen</p>
+            </div>
+          </div>
+          <div class="logo-marquee">
+            <div class="logo-marquee-track">
+              <div class="logo-marquee-group">
+                <img src="/assets/images/clients/menace-burger.png" alt="Menace Burger" loading="lazy">
+                <img src="/assets/images/clients/musti-grill.png" alt="MustiGrill" loading="lazy">
+                <img src="/assets/images/clients/sts.png" alt="Swiss Training System" loading="lazy">
+                <img src="/assets/images/clients/sparta.png" alt="Sparta" loading="lazy">
+                <img src="/assets/images/clients/holzofe-beck.png" class="logo-wide" alt="De Holzofe Beck" loading="lazy">
+                <img src="/assets/images/clients/time-to-shine.png" class="logo-wide" alt="Time to Shine MMA" loading="lazy">
+                <img src="/assets/images/clients/baba-doener.png" class="logo-wide logo-on-black" alt="Baba Döner &amp; Iskender" loading="lazy">
+                <img src="/assets/images/clients/btasty.png" class="logo-badge" alt="BTasty Neuhausen" loading="lazy">
+                <img src="/assets/images/clients/pizza-eck.png" alt="Pizza Eck Burger &amp; Kebab" loading="lazy">
+                <img src="/assets/images/clients/sunshine-hill.png" class="logo-wide logo-badge" alt="Sunshine Hill Steakhouse" loading="lazy">
+                <img src="/assets/images/clients/tschaglis.png" class="logo-on-black" alt="Tschaglis" loading="lazy">
+                <img src="/assets/images/clients/cano.png" alt="Cano" loading="lazy">
+                <img src="/assets/images/clients/mados.png" class="logo-wide logo-badge logo-rounded" alt="Mado&#39;s Uster" loading="lazy">
+                <img src="/assets/images/clients/frenkel-consulting.png" alt="Frenkel Consulting" loading="lazy">
+                <img src="/assets/images/clients/kebab-and-bread.png" class="logo-wordmark" alt="Kebab &amp; Bread Zürich" loading="lazy">
+              </div>
+              <div class="logo-marquee-group" aria-hidden="true">
+                <img src="/assets/images/clients/menace-burger.png" alt="" loading="lazy">
+                <img src="/assets/images/clients/musti-grill.png" alt="" loading="lazy">
+                <img src="/assets/images/clients/sts.png" alt="" loading="lazy">
+                <img src="/assets/images/clients/sparta.png" alt="" loading="lazy">
+                <img src="/assets/images/clients/holzofe-beck.png" class="logo-wide" alt="" loading="lazy">
+                <img src="/assets/images/clients/time-to-shine.png" class="logo-wide" alt="" loading="lazy">
+                <img src="/assets/images/clients/baba-doener.png" class="logo-wide logo-on-black" alt="" loading="lazy">
+                <img src="/assets/images/clients/btasty.png" class="logo-badge" alt="" loading="lazy">
+                <img src="/assets/images/clients/pizza-eck.png" alt="" loading="lazy">
+                <img src="/assets/images/clients/sunshine-hill.png" class="logo-wide logo-badge" alt="" loading="lazy">
+                <img src="/assets/images/clients/tschaglis.png" class="logo-on-black" alt="" loading="lazy">
+                <img src="/assets/images/clients/cano.png" alt="" loading="lazy">
+                <img src="/assets/images/clients/mados.png" class="logo-wide logo-badge logo-rounded" alt="" loading="lazy">
+                <img src="/assets/images/clients/frenkel-consulting.png" alt="" loading="lazy">
+                <img src="/assets/images/clients/kebab-and-bread.png" class="logo-wordmark" alt="" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CUSTOMER VALUE -->
+      <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-24 md:py-32 relative z-10">
+        <div class="mb-14 reveal-on-scroll">
+          <div class="section-accent">
+            <span class="font-label-bold text-label-bold text-bronze uppercase tracking-[0.2em]">Mehrwert für unsere Kunden</span>
+          </div>
+          <h2 class="font-display text-[36px] md:text-headline-xl uppercase tracking-tight leading-[1.05]">Das hat sich <span class="text-bronze italic lowercase">verändert.</span></h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <div class="md:col-span-5 brutal-border bg-obsidian p-10 md:p-12 flex flex-col justify-center reveal-on-scroll">
+            <span class="font-label-bold text-label-bold text-tertiary uppercase tracking-widest mb-6 block border-b border-dim-gray pb-4">Case Study: Menace Burger</span>
+            <p class="font-display text-[72px] md:text-[96px] text-stark-white mb-2 leading-none tracking-tighter">1'200</p>
+            <p class="font-display text-2xl mb-6 text-bronze uppercase">Menüs an einem Sonntag</p>
+            <p class="text-secondary font-body border-l-2 border-bronze pl-4">Nach einer Kampagne für Menace Burger kamen so viele Kunden, dass an einem Sonntag ein Tagesrekord gebrochen wurde.</p>
+          </div>
+          <div class="md:col-span-7 grid grid-cols-1 gap-8">
+            <div class="brutal-border bg-obsidian/60 backdrop-blur-sm p-8 md:p-10 reveal-on-scroll">
+              <p class="font-body text-lg md:text-xl mb-8 leading-relaxed text-stark-white font-light italic">«Seit MarkenDing unsere Videos macht, kommen regelmässig Kunden in die Bäckerei und sagen: «Ich habe euch auf TikTok gesehen.» Das merken wir direkt am Umsatz.»</p>
+              <div class="flex items-center gap-5 border-t border-dim-gray pt-6">
+                <div class="w-12 h-12 bg-bronze/10 border border-bronze/50 flex items-center justify-center font-label-bold text-bronze">MG</div>
+                <div>
+                  <p class="font-label-bold text-label-bold text-stark-white uppercase tracking-widest mb-1">Marcel Gerber</p>
+                  <p class="text-secondary text-sm">Inhaber, HolzofenBeck</p>
+                </div>
+              </div>
+            </div>
+            <div class="brutal-border bg-obsidian/60 backdrop-blur-sm p-8 md:p-10 reveal-on-scroll">
+              <p class="font-body text-lg md:text-xl mb-8 leading-relaxed text-stark-white font-light italic">«Wir haben MarkenDing mit der Vermarktung unseres Events beauftragt — das lief von der Content-Idee bis zum Live-Posting. Das Ergebnis war ein ausverkaufter Saal und eine Menge neuer Follower.»</p>
+              <div class="flex items-center gap-5 border-t border-dim-gray pt-6">
+                <div class="w-12 h-12 bg-bronze/10 border border-bronze/50 flex items-center justify-center font-label-bold text-bronze">BB</div>
+                <div>
+                  <p class="font-label-bold text-label-bold text-stark-white uppercase tracking-widest mb-1">Benjamin Brander</p>
+                  <p class="text-secondary text-sm">CEO, 360 MMA &amp; Time To Shine</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORM -->
+      <section id="anfrage" class="border-t border-bronze bg-obsidian/90 relative z-10 scroll-mt-24">
+        <div class="max-w-3xl mx-auto px-margin-mobile md:px-gutter py-24 md:py-32">
+          <div class="mb-12 text-center reveal-on-scroll">
+            <span class="font-label-bold text-label-bold uppercase tracking-[0.3em] block mb-6 text-bronze">Kostenloses Erstgespräch</span>
+            <h2 class="font-display text-[36px] md:text-headline-xl uppercase tracking-tight leading-[1.05] mb-6">Lass uns <span class="gold-glow-text italic lowercase" data-text="reden.">reden.</span></h2>
+            <p class="font-body text-body-lg text-secondary">Hinterlass uns deine Kontaktdaten. Wir melden uns innert 24 Stunden und schauen gemeinsam, was Social Media für dein Business bringen kann.</p>
+          </div>
+          <div class="brutal-border bg-obsidian p-8 md:p-12 reveal-on-scroll">
+            <form name="empfehlung" method="POST" action="/empfehlung?gesendet=1" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+              <input type="hidden" name="form-name" value="empfehlung">
+              <input type="hidden" name="ref" value="">
+              <p class="hidden">
+                <label>Nicht ausfüllen: <input name="bot-field"></label>
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block font-label-bold text-label-bold text-secondary uppercase tracking-widest mb-3">Name *</label>
+                  <input type="text" id="name" name="name" placeholder="Dein Name" required autocomplete="name" class="w-full bg-surface-container border border-dim-gray p-4 text-stark-white font-body focus:border-bronze focus:outline-none transition-colors">
+                </div>
+                <div>
+                  <label for="company" class="block font-label-bold text-label-bold text-secondary uppercase tracking-widest mb-3">Unternehmen *</label>
+                  <input type="text" id="company" name="company" placeholder="Dein Unternehmen" required autocomplete="organization" class="w-full bg-surface-container border border-dim-gray p-4 text-stark-white font-body focus:border-bronze focus:outline-none transition-colors">
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="phone" class="block font-label-bold text-label-bold text-secondary uppercase tracking-widest mb-3">Telefon *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+41 ..." required autocomplete="tel" class="w-full bg-surface-container border border-dim-gray p-4 text-stark-white font-body focus:border-bronze focus:outline-none transition-colors">
+                </div>
+                <div>
+                  <label for="email" class="block font-label-bold text-label-bold text-secondary uppercase tracking-widest mb-3">E-Mail *</label>
+                  <input type="email" id="email" name="email" placeholder="deine@email.ch" required autocomplete="email" class="w-full bg-surface-container border border-dim-gray p-4 text-stark-white font-body focus:border-bronze focus:outline-none transition-colors">
+                </div>
+              </div>
+              <div>
+                <label for="referrer" class="block font-label-bold text-label-bold text-secondary uppercase tracking-widest mb-3">Wer hat dich empfohlen?</label>
+                <input type="text" id="referrer" name="referrer" placeholder="Name der Person" class="w-full bg-surface-container border border-dim-gray p-4 text-stark-white font-body focus:border-bronze focus:outline-none transition-colors">
+              </div>
+              <div>
+                <label for="message" class="block font-label-bold text-label-bold text-secondary uppercase tracking-widest mb-3">Worum geht es? <span class="normal-case tracking-normal text-tertiary">(optional)</span></label>
+                <textarea id="message" name="message" rows="4" placeholder="Z.B. Restaurant in Zürich, wir möchten mehr Gäste über Instagram gewinnen." class="w-full bg-surface-container border border-dim-gray p-4 text-stark-white font-body focus:border-bronze focus:outline-none transition-colors resize-y"></textarea>
+              </div>
+              <p id="form-error" class="hidden text-error text-sm font-body">Das hat leider nicht geklappt. Bitte versuche es nochmals oder ruf uns an: <a href="tel:+41767861575" class="underline">+41 76 786 15 75</a>.</p>
+              <button type="submit" class="btn-brutal bg-bronze text-obsidian px-8 py-5 font-label-bold uppercase tracking-widest flex items-center justify-center gap-3 w-full hover:bg-stark-white transition-colors duration-300">
+                Erstgespräch anfragen
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+              <p class="text-tertiary text-xs font-body text-center">Unverbindlich und kostenlos. Deine Daten verwenden wir nur, um dich zu kontaktieren. <a href="/pages/datenschutz.html" class="underline hover:text-bronze">Datenschutz</a></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-obsidian w-full py-10 border-t border-dim-gray text-stark-white relative z-10">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-tertiary font-body uppercase tracking-widest">
+        <p>© 2026 MarkenDing · Social Media Agentur Zürich</p>
+        <p class="flex gap-6">
+          <a class="hover:text-stark-white transition-colors" href="/pages/impressum.html">Impressum</a>
+          <a class="hover:text-stark-white transition-colors" href="/pages/datenschutz.html">Datenschutz</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Referral code from ?von=anna-muster, shown as "Anna Muster"
+      const params = new URLSearchParams(window.location.search);
+      const ref = (params.get('von') || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 60);
+      const form = document.querySelector('form[name="empfehlung"]');
+      if (ref) {
+        const displayName = ref.split('-').filter(Boolean).map(part => part.charAt(0).toUpperCase() + part.slice(1)).join(' ');
+        document.getElementById('referrer-name').textContent = displayName;
+        document.getElementById('referrer-name-wrap').classList.remove('hidden');
+        form.elements.ref.value = ref;
+        form.elements.referrer.value = displayName;
+      }
+
+      const showSuccess = () => {
+        form.innerHTML = '<div class="border border-bronze bg-bronze/10 p-8 text-center"><span class="material-symbols-outlined text-bronze text-[40px] mb-4">mark_email_read</span><p class="font-heading text-xl uppercase mb-2">Anfrage gesendet</p><p class="text-secondary font-body">Vielen Dank! Wir melden uns innert 24 Stunden bei dir.</p></div>';
+      };
+      if (params.get('gesendet') === '1') showSuccess();
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const button = form.querySelector('button[type="submit"]');
+        button.disabled = true;
+        document.getElementById('form-error').classList.add('hidden');
+        try {
+          const res = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(new FormData(form)).toString(),
+          });
+          if (!res.ok) throw new Error(res.status);
+          showSuccess();
+        } catch {
+          document.getElementById('form-error').classList.remove('hidden');
+          button.disabled = false;
+        }
+      });
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } });
+      }, { root: null, rootMargin: '0px', threshold: 0.15 });
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+      const header = document.querySelector('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) { header.classList.add('bg-obsidian/90'); header.classList.remove('bg-obsidian/70'); }
+        else { header.classList.remove('bg-obsidian/90'); header.classList.add('bg-obsidian/70'); }
+      });
+    });
+
+    const initShader = () => {
+      const container = document.getElementById('canvas-container');
+      if (!container) return;
+      const scene = new THREE.Scene();
+      const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+      const renderer = new THREE.WebGLRenderer({ antialias: false, alpha: false });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+      const vertexShader = `varying vec2 v_texCoord; void main() { v_texCoord = uv; gl_Position = vec4(position, 1.0); }`;
+      const fragmentShader = `
+        precision highp float;
+        uniform float u_time; uniform vec2 u_resolution; uniform vec2 u_mouse;
+        varying vec2 v_texCoord;
+        void main() {
+          vec2 uv = v_texCoord; vec2 mouse = u_mouse / u_resolution;
+          vec3 color1 = vec3(0.04, 0.04, 0.04); vec3 color2 = vec3(0.08, 0.07, 0.06);
+          float motion = sin(uv.x * 3.0 + u_time * 0.5) * 0.1 + cos(uv.y * 2.0 - u_time * 0.3) * 0.1;
+          float glow = smoothstep(0.4, 0.0, distance(uv, mouse)) * 0.12;
+          float shimmer = pow(sin(uv.x * 10.0 + uv.y * 10.0 + u_time * 1.2) * 0.5 + 0.5, 20.0) * 0.04;
+          vec3 goldColor = vec3(0.63, 0.49, 0.29);
+          vec3 finalColor = mix(color1, color2, uv.y + motion);
+          finalColor += goldColor * glow; finalColor += goldColor * shimmer;
+          gl_FragColor = vec4(finalColor, 1.0);
+        }
+      `;
+      const uniforms = {
+        u_time: { value: 0.0 },
+        u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+        u_mouse: { value: new THREE.Vector2(window.innerWidth / 2, window.innerHeight / 2) }
+      };
+      const geometry = new THREE.PlaneGeometry(2, 2);
+      const material = new THREE.ShaderMaterial({ vertexShader, fragmentShader, uniforms });
+      scene.add(new THREE.Mesh(geometry, material));
+      document.addEventListener('mousemove', (e) => { uniforms.u_mouse.value.x = e.clientX; uniforms.u_mouse.value.y = window.innerHeight - e.clientY; });
+      const animate = (time) => { uniforms.u_time.value = time * 0.001; renderer.render(scene, camera); requestAnimationFrame(animate); };
+      window.addEventListener('resize', () => { renderer.setSize(window.innerWidth, window.innerHeight); uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight); });
+      requestAnimationFrame(animate);
+    };
+    if (typeof THREE !== 'undefined') initShader();
+  </script>
+</body>
+</html>

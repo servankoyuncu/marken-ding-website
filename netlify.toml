@@ -10,7 +10,38 @@
   status = 301
   force = true
 
+# Short links for the referral program (not linked anywhere on the site)
+[[redirects]]
+  from = "/empfehlung"
+  to = "/pages/empfehlung.html"
+  status = 200
+
+[[redirects]]
+  from = "/partner"
+  to = "/pages/partner.html"
+  status = 200
+
 # Custom headers
+[[headers]]
+  for = "/empfehlung"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/partner"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/pages/empfehlung*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/pages/partner*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
 [[headers]]
   for = "/*"
   [headers.values]
