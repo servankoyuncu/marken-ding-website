@@ -35,19 +35,21 @@
             Mehr Kunden durch <span class="gold-glow-text italic lowercase" data-text="social media.">social media.</span>
           </h1>
           <p class="font-body text-body-lg text-secondary max-w-2xl mx-auto mb-14">
-            Schön, dass du hier bist. Im Video erfährst du in wenigen Minuten, wer wir sind, was wir machen und was unsere Kunden erreicht haben, seit wir ihr Social Media übernommen haben.
+            Schön, dass du hier bist. Im Video erfährst du in gut einer Minute, wer wir sind, was wir machen und was unsere Kunden erreicht haben, seit wir ihr Social Media übernommen haben.
           </p>
         </div>
 
         <div class="max-w-4xl mx-auto reveal-on-scroll">
-          <!-- Video placeholder: replace with <video> or embed once the video is ready -->
-          <div class="relative aspect-video brutal-border border-bronze bg-obsidian/80 backdrop-blur-sm overflow-hidden flex flex-col items-center justify-center text-center p-8 shadow-[0_0_60px_rgba(161,126,74,0.12)]">
-            <div class="absolute top-0 right-0 w-48 h-48 bg-bronze/10 rounded-full blur-3xl"></div>
-            <div class="w-20 h-20 md:w-24 md:h-24 border border-bronze flex items-center justify-center mb-6 relative z-10">
-              <span class="material-symbols-outlined text-bronze text-[48px]">play_arrow</span>
-            </div>
-            <p class="font-label-bold text-label-bold text-stark-white uppercase tracking-[0.2em] mb-2 relative z-10">Video folgt in Kürze</p>
-            <p class="text-secondary text-sm font-body relative z-10">Wer wir sind, was wir tun und was wir für unsere Kunden erreicht haben.</p>
+          <div class="relative aspect-video brutal-border border-bronze bg-obsidian overflow-hidden shadow-[0_0_60px_rgba(161,126,74,0.12)]">
+            <video id="intro-video" class="absolute inset-0 w-full h-full object-cover" preload="none" playsinline poster="/assets/video/markending-intro-2026-10-poster.jpg">
+              <source src="/assets/video/markending-intro-2026-10.mp4" type="video/mp4">
+            </video>
+            <button id="intro-play" type="button" class="absolute inset-0 w-full h-full flex flex-col items-center justify-center gap-4 bg-obsidian/30 hover:bg-obsidian/10 transition-colors group" aria-label="Video abspielen">
+              <span class="w-20 h-20 md:w-24 md:h-24 bg-bronze text-obsidian flex items-center justify-center shadow-[0_0_40px_rgba(161,126,74,0.5)] group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined" style="font-size:56px">play_arrow</span>
+              </span>
+              <span class="font-label-bold text-label-bold text-stark-white uppercase tracking-[0.2em] bg-obsidian/70 px-4 py-2">Video ansehen · 1:15</span>
+            </button>
           </div>
         </div>
 
@@ -306,6 +308,15 @@
         form.innerHTML = '<div class="border border-bronze bg-bronze/10 p-8 text-center"><span class="material-symbols-outlined text-bronze text-[40px] mb-4">mark_email_read</span><p class="font-heading text-xl uppercase mb-2">Anfrage gesendet</p><p class="text-secondary font-body">Vielen Dank! Wir melden uns innert 24 Stunden bei dir.</p></div>';
       };
       if (params.get('gesendet') === '1') showSuccess();
+
+      // Intro video: branded play button first, native controls once playing
+      const video = document.getElementById('intro-video');
+      const playButton = document.getElementById('intro-play');
+      playButton.addEventListener('click', () => {
+        playButton.classList.add('hidden');
+        video.controls = true;
+        video.play();
+      });
 
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
