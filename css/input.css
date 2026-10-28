@@ -219,3 +219,22 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #a17e4a;
 }
+
+/* Embedded Instagram / TikTok reels */
+.reel-card {
+  width: 326px;
+  margin: 0;
+}
+.reel-card iframe {
+  display: block;
+  width: 326px;
+  height: 620px;
+  border: 1px solid rgba(161, 126, 74, 0.3);
+  background: #000;
+}
+.reel-row {
+  scrollbar-width: none;
+}
+.reel-row::-webkit-scrollbar {
+  display: none;
+}

@@ -56,7 +56,8 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Revalidate on every visit (cheap via ETag) so style changes show up immediately
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=2592000"
+    Cache-Control = "public, max-age=0, must-revalidate"
