@@ -66,6 +66,7 @@
   ]
 }
   </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="48847a11-dd8b-4c41-bafe-4b8032696276"></script>
 </head>
 <body class="text-stark-white font-body overflow-x-hidden">
   <div id="canvas-container"></div>
@@ -181,7 +182,7 @@
             <div class="brutal-border bg-obsidian/60 backdrop-blur-sm p-8 reveal-on-scroll">
               <span class="material-symbols-outlined text-bronze text-[40px] mb-6">chat</span>
               <h3 class="font-display text-xl uppercase mb-6">WhatsApp</h3>
-              <a href="https://wa.me/41767861575" target="_blank" rel="noopener" class="btn-brutal bg-bronze text-obsidian px-8 py-5 font-label-bold uppercase tracking-widest flex items-center justify-center gap-3 w-full hover:bg-stark-white transition-colors duration-300">
+              <a href="https://wa.me/41767861575" data-umami-event="whatsapp-kontakt" target="_blank" rel="noopener" class="btn-brutal bg-bronze text-obsidian px-8 py-5 font-label-bold uppercase tracking-widest flex items-center justify-center gap-3 w-full hover:bg-stark-white transition-colors duration-300">
                 Chat starten
                 <span class="material-symbols-outlined">arrow_forward</span>
               </a>
@@ -248,6 +249,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       if (new URLSearchParams(window.location.search).get('gesendet') === '1') {
+        if (window.umami) window.umami.track('formular-kontakt');
         const form = document.querySelector('form[name="kontakt"]');
         if (form) {
           form.innerHTML = '<div class="border border-bronze bg-bronze/10 p-8 text-center"><span class="material-symbols-outlined text-bronze text-[40px] mb-4">mark_email_read</span><p class="font-heading text-xl uppercase mb-2">Nachricht gesendet</p><p class="text-secondary font-body">Vielen Dank für deine Nachricht. Wir melden uns innert 24 Stunden bei dir.</p></div>';
