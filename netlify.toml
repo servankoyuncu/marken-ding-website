@@ -50,6 +50,12 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
+# Umlauts in llms.txt need an explicit charset
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
 # Cache static assets
 [[headers]]
   for = "/assets/*"

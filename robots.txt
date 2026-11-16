@@ -1,3 +1,5 @@
+# Suchmaschinen und KI-Suchdienste (Google, Bing, ChatGPT, Perplexity, Claude …) dürfen alles crawlen.
 User-agent: *
 Allow: /
-Sitemap: https://www.marken-ding.com/sitemap.xml
+
+Sitemap: https://marken-ding.com/sitemap.xml
