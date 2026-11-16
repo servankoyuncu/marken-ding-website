@@ -13,6 +13,7 @@
 
 - [Startseite](https://marken-ding.com/): Überblick, Kunden, Resultate und Kundenstimmen
 - [Angebot](https://marken-ding.com/pages/angebot.html): Leistungen, Ablauf der Zusammenarbeit, Pakete, Preise und häufige Fragen
+- [Social Media für Gastronomie](https://marken-ding.com/pages/gastronomie.html): Reels, TikTok und Instagram für Restaurants, Imbisse und Bäckereien, mit Case Study und FAQ
 - [Über uns](https://marken-ding.com/pages/about.html): Das Gründerteam und unsere Arbeitsweise
 - [Kontakt](https://marken-ding.com/pages/kontakt.html): Erstgespräch anfragen
 

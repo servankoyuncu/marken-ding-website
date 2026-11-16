@@ -33,7 +33,10 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background: #040404;
+  /* Static version of the WebGL shimmer; js/background.js fades the animation in on top (desktop only) */
+  background:
+    radial-gradient(ellipse 60% 45% at 50% 40%, rgba(161, 126, 74, 0.07), transparent 70%),
+    linear-gradient(to bottom, #141210, #0a0a0a);
 }
 
 .content-wrapper {

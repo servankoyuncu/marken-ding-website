@@ -10,7 +10,6 @@
     <a class="font-display text-3xl uppercase tracking-widest text-stark-white hover:text-bronze transition-colors" href="/">Home</a>
     <a class="font-display text-3xl uppercase tracking-widest text-stark-white hover:text-bronze transition-colors" href="/pages/about.html">Über uns</a>
     <a class="font-display text-3xl uppercase tracking-widest text-stark-white hover:text-bronze transition-colors" href="/pages/angebot.html">Angebot</a>
-    <a class="font-display text-3xl uppercase tracking-widest text-stark-white hover:text-bronze transition-colors" href="/pages/blog.html">Blog</a>
     <a class="font-display text-3xl uppercase tracking-widest text-stark-white hover:text-bronze transition-colors" href="/pages/kontakt.html">Kontakt</a>
     <button id="mobile-nav-close" class="absolute top-6 right-6 text-stark-white hover:text-bronze transition-colors" aria-label="Menü schliessen"><span class="material-symbols-outlined text-4xl">close</span></button>
   `;
